@@ -1,0 +1,39 @@
+<div class="ca-container">
+  <h4>Course assignments</h4>
+  <div *ngFor="let i of [0, 1, 2]; let last = last" fxLayout="row" fxLayoutAlign="start center">
+    <div fxFlex="100">
+      <div class="stepper-container" fxFlex="10">
+        <app-stepper [position]="last ? last: false"></app-stepper>
+      </div>
+
+      <div class="card-container" fxFlex="90">
+        <p-card>
+          <p-header fxLayout="column">
+            <div class="upper-header" fxLayout="column">
+              <div fxLayoutAlign="start center">
+                <div fxFlex="90"><span>COURSE</span></div>
+                <div fxFlex="10"><img [src]="assetSvgPath + 'options_white.svg'" /></div>
+              </div>
+              <div class="p-10" fxLayoutAlign="start center">
+                <h4>Understanding alternatives</h4>
+              </div>
+            </div>
+
+            <div fxLayout="row" fxFlex="100">
+              <img [src]="assetImgPath + 'common-img.png'">
+            </div>
+          </p-header>
+
+          <div>This channel focuses on understanding alternatives. In particular it covers: BTIM Diversified Strategies
+            Fund...</div>
+
+          <div class="badges" fxLayout="row wrap" fxLayoutAlign="start center">
+            <span fxLayoutAlign="center center" *ngFor="let badge of badges" [attr.class]="badge.class"><img
+                   [src]="assetSvgPath + badge.icon" />
+              {{ badge.text }}</span>
+          </div>
+        </p-card>
+      </div>
+    </div>
+  </div>
+</div>

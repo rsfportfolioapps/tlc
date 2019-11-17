@@ -1,0 +1,30 @@
+@import 'src/theme/shared';
+
+
+.card_notification {
+  border-bottom: thin $border-line solid;
+  margin: 10px 0;
+  box-shadow: $down-edge-shadow;
+  background-color: $color-white;
+}
+
+.card_notification--img {
+  height: 40px;
+  width: auto;
+  border-radius: 10px;
+}
+
+.card_notification--content {
+  padding: 20px;
+}
+
+.card_notification--footer {
+  padding: 20px;
+  border-top: thin $border-line solid;
+  font-size: 14px;
+}
+
+.card_notification--content__time {
+  font-size: 12px;
+  margin: 5px 0;
+}

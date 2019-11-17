@@ -1,0 +1,30 @@
+<div class="al__container">
+  <div *ngIf="(assignedLearning$ | async)" fxLayout="column" fxLayoutAlign="start start">
+    <p-card [header]="(assignedLearning$ | async).header" [subheader]="(assignedLearning$ | async).subHeader"
+            styleClass="ui-card-shadow" fxLayoutGap="10px">
+      <p-header fxLayout="column">
+        <div fxLayout="row" fxFlex="100">
+          <img [src]="(assignedLearning$ | async).imgUrl">
+        </div>
+      </p-header>
+
+      <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="10px">
+        <p>Communication • Ethics</p>
+        <p>Due Sunday, 31 March 2019 at 4:30PM</p>
+      </div>
+
+      <div class="badges" fxLayout="row wrap" fxLayoutAlign="start center">
+        <span fxLayoutAlign="center center" *ngFor="let badge of (assignedLearning$ | async).badges"
+              [attr.class]="badge.class"><img [src]="assetSvgPath + badge.icon" />
+          {{ badge.text }}</span>
+      </div>
+
+      <h2>Gearing and Margin Lending</h2>
+
+      <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praese ntium voluptatum deleniti
+        atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt
+        in culpa qui officia deserunt mollitia animi, id est labo rum et dolorum fuga?</p>
+
+    </p-card>
+  </div>
+</div>

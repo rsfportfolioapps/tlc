@@ -1,0 +1,24 @@
+<ion-toolbar>
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <img routerLink="/dashboard/discussion" [src]="assetSvgPath + 'x.svg'" />
+    <span>New general discussion</span>
+  </div>
+</ion-toolbar>
+
+<ion-content>
+  <div>
+    <app-general-info></app-general-info>
+  </div>
+  <div class="bt p-15" fxLayout="row" fxLayoutAlign="center center">
+    <app-generic-attachment></app-generic-attachment>
+  </div>
+  <div class="bt p-15" fxLayout="row" fxLayoutAlign="start center">
+    <app-group-type></app-group-type>
+  </div>
+  <div class="bt p-15" fxLayout="row" fxLayoutAlign="start center">
+    <app-participants></app-participants>
+  </div>
+  <div class="mtb-40" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="20px">
+    <button type="button"><img [src]="assetSvgPath + 'tiny_check.svg'" /> <span class="ml-5">Create Discussion</span></button>
+  </div>
+</ion-content>

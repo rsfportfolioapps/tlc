@@ -1,0 +1,30 @@
+<div *ngFor="let discussion of discussions" fxLayout="column" fxLayoutAlign="start start">
+  <p-card (click)="gotoDetail()" [header]="discussion.header" styleClass="ui-discussion-shadow">
+    <p-header  fxLayout="column">
+      <div fxLayout="row" fxFlex="100">
+        <div class="header" fxFlex="15">
+          <img *ngIf="discussion.imgUrl" [src]="discussion.imgUrl">
+        </div>
+        <div fxFlex="70" class="card__small-header" fxLayoutAlign="start center">Private discussion</div>
+        <div fxFlex="15" fxLayoutAlign="center center"> <img [src]="assetSvgPath + 'options_dark.svg'" /></div>
+      </div>
+    </p-header>
+
+    <div *ngIf="discussion.description" class="card__description">{{ discussion.description }}</div>
+    <div *ngIf="discussion.subDescription" class="card__sub-description">{{ discussion.subDescription }}</div>
+    <div *ngIf="discussion.dueDate" class="card__due-date">{{ discussion.dueDate }}</div>
+
+    <p-footer fxLayout="column" fxLayoutGap="10px" >
+      <div class="badges" fxLayout="row" fxLayoutAlign="start center">
+        <span fxLayoutAlign="center center" *ngFor="let badge of discussion.badges" [attr.class]="badge.class">
+          <img *ngIf="badge.icon" [src]="assetSvgPath + badge.icon" />
+          {{ badge.text }}</span>
+      </div>
+
+      <div class="my-discussion--actions-info" fxLayout="row" fxLayoutAlign="space-between center">
+        <span fxLayoutAlign="center center" *ngFor="let action of discussion.actions" (click)="onClick(action, discussion)">
+          <img [src]="assetSvgPath + action.icon" />{{ action.text === 'save' && isSaved ? 'remove' : action.text }}</span>
+      </div>
+    </p-footer>
+  </p-card>
+</div>

@@ -1,0 +1,45 @@
+<ion-toolbar>
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <div fxFlex="60" fxFlexAlign="start center">
+      <i routerLink="/dashboard/home" class="fas fa-arrow-left"></i>
+    </div>
+    <div fxFlex="40" fxLayoutAlign="end start" fxLayoutGap="15px">
+      <img [src]="assetSvgPath + 'share.svg'" />
+      <img [src]="assetSvgPath + 'options_dark.svg'" />
+    </div>
+  </div>
+</ion-toolbar>
+
+<ion-content class="rank-container">
+  <div fxLayout="column" class="rank-num">
+    <div routerLink="/rank" class="rank-num__content" fxLayoutAlign="start center" fxLayout="row">
+      <div fxFlex="18" fxLayoutAlign="center center">
+        <div class="card__rank--number">17</div>
+      </div>
+      <div fxFlex="82" fxLayout="column" fxLayoutAlign="end start">
+        <h2>Rank 17</h2>
+        <p>St George Planning Group</p>
+      </div>
+    </div>
+  </div>
+
+  <div fxLayout="column" class="rank-score">
+    <div routerLink="/rank" class="rank-score__content" fxLayoutAlign="start center" fxLayout="row">
+      <div fxFlex="18" fxLayoutAlign="center center">
+        <img [src]="assetSvgPath + 'score_large.svg'">
+      </div>
+      <div fxFlex="82" fxLayout="column" fxLayoutAlign="end start">
+        <h2>196</h2>
+        <p>Knowledge points</p>
+      </div>
+    </div>
+
+    <app-knowledge-points></app-knowledge-points>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="start center" class="rank-progress">
+    <app-my-progress></app-my-progress>
+  </div>
+
+
+</ion-content>

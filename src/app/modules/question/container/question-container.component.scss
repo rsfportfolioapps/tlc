@@ -1,0 +1,15 @@
+@import 'src/theme/shared';
+
+.question-container {
+  padding: 0 20px;
+}
+
+.down-edge-shadow {
+  box-shadow: $down-top-edge-shadow !important;
+}
+
+ion-toolbar {
+  span {
+    font-size: 16px;
+  }
+}

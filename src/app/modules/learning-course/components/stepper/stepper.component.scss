@@ -1,0 +1,20 @@
+@import 'src/theme/shared';
+
+.circle-container {
+  z-index: 999;
+  position: relative;
+  top: 4px;
+  left: 1px;
+}
+
+.v-line {
+  position: relative;
+  left: 7px;
+  width: 2px !important;
+  min-width: 2px !important;
+  border-right: thin $color-green solid;
+}
+
+.no-border {
+  border-right: none !important;
+}

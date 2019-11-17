@@ -1,0 +1,37 @@
+<ion-toolbar>
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <div fxFlex="70" fxFlexAlign="start center">
+      <i (click)="onClose()" class="fas fa-arrow-left"></i>
+    </div>
+  </div>
+</ion-toolbar>
+
+<ion-content class="md-container">
+  <div fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="20px">
+    <div fxLayout="row" fxLayoutAlign="start center">
+      <h5>Move activities to:</h5>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="start center">
+      <ion-select value="My Board" okText="Okay" cancelText="Dismiss">
+        <ion-select-option value="MyBoard">My Board</ion-select-option>
+        <ion-select-option value="blonde">Blonde</ion-select-option>
+        <ion-select-option value="black">Black</ion-select-option>
+        <ion-select-option value="red">Red</ion-select-option>
+      </ion-select>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="start center">
+      <ion-select value="Column" okText="Okay" cancelText="Dismiss">
+        <ion-select-option value="column">Column</ion-select-option>
+        <ion-select-option value="blonde">Blonde</ion-select-option>
+        <ion-select-option value="black">Black</ion-select-option>
+        <ion-select-option value="red">Red</ion-select-option>
+      </ion-select>
+    </div>
+  </div>
+
+  <div class="md-footer" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="20px">
+    <button type="button">Move activities</button>
+  </div>
+</ion-content>

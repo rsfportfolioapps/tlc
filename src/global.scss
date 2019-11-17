@@ -1,0 +1,171 @@
+// http://ionicframework.com/docs/theming/
+@import "~@ionic/angular/css/core.css";
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+//angular material
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import "./theme/shared";
+
+p {
+  color: $color-black-1;
+  font-size: 15px;
+}
+
+.fw-100 {
+  width: 100%;
+}
+
+.h-100px {
+  height: 100px !important;
+}
+
+.p-cursor {
+  cursor: pointer;
+}
+
+*:focus {
+  outline: none;
+}
+
+.snpb {
+  .ui-progressbar {
+    height: 7px !important;
+    margin-bottom: 20px !important;
+  }
+}
+
+.sb-menus {
+
+  .mat-list-base .mat-list-item .mat-list-item-content,
+  .mat-list-base .mat-list-option .mat-list-item-content {
+    padding: 0 !important;
+  }
+
+  img {
+    margin-right: 5px;
+  }
+}
+
+.ui-progressbar-value {
+  background-color: $color-orange !important;
+}
+
+.ui-widget-overlay {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+//card information
+.badges {
+  span {
+    padding: 3px 5px;
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    font-size: 12px;
+    padding: 5px 8px;
+
+    img {
+      margin: 0 5px;
+    }
+
+    &.score {
+      background-color: #fff5e5;
+      color: $color-orange;
+    }
+
+    &.certificate {
+      background-color: #fff5e5;
+      color: $color-orange;
+    }
+
+    &.mandatory {
+      background-color: #ffe8e8;
+      color: $color-red;
+    }
+
+    &.clock {
+      background-color: $color-gray-1;
+      color: $color-black-1;
+    }
+
+    &.violet {
+      background-color: #7377ee;
+      color: $color-white;
+    }
+
+    &.green {
+      background-color: #1fc551;
+      color: $color-white;
+    }
+
+    &.l-green {
+      background-color: #e8f9ed;
+      color: $color-green;
+    }
+
+    &.cyan {
+      background-color: #00bfe6;
+      color: $color-white;
+    }
+
+    &.yellow {
+      background-color: #fff5e5;
+      color: $color-orange;
+    }
+  }
+}
+
+.card__description {
+  margin: 10px 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+.card__sub-description {
+  margin: 10px 0;
+}
+
+.card__due-date {
+  color: $color-red;
+  margin: 10px 0;
+}
+
+// ****** custom styling for ios and android ******
+ion-segment-button {
+  &.ios {
+    border-radius: 0 !important;
+    height: 50px !important;
+    border-right: 0 !important;
+    border-left: 0 !important;
+    background: transparent !important;
+    color: $color-black-1 !important;
+    border-bottom: $color-gray-1 !important;
+    border-bottom: 1px $color-gray-1 solid !important;
+    border-top: none !important;
+  }
+
+  &.segment-button-checked {
+    color: $color-primary !important;
+    border-bottom: 1px $color-primary solid !important;
+  }
+}
+
+.ui-card-content {
+  text-align: left !important;
+}
+
+p-header h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

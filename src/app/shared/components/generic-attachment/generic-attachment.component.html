@@ -1,0 +1,20 @@
+<div fxLayout="column" fxLayoutAlign="space-around center" class="ac__circle--container">
+  <div fxFill fxLayout="row" fxLayoutAlign="start center">
+    <p fxFlex="95" fxFlexOffset="5">Attachments</p>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="40px">
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <div class="ac__circle" fxLayoutAlign="center center">
+        <img [src]="assetSvgPath + 'attach_file_white.svg'" />
+      </div>
+      <span>Add file</span>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <div class="ac__circle" fxLayoutAlign="center center">
+        <img [src]="assetSvgPath + 'add_link.svg'" />
+      </div>
+      <span>Add link</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<ion-content fxFlexFill>
+  <div class="login-container" fxLayout="column" fxLayoutAlign="center center">
+    <form novalidate class="login__form" [formGroup]="form" (ngSubmit)="onLogin()">
+      <div *ngIf="loginScreen === 1" fxLayout="column" fxFlexFill>
+        <div class="login__section--head" fxLayout="column" fxLayoutAlign="center center">
+          <h1>Sign in</h1>
+          <input type="email" formControlName="email" class="tlc-form__input--email" placeholder="Email" />
+
+          <div fxLayout="column" fxLayoutAlign="space-around center">
+            <p (click)="gotoForgotPassword()">Forgot Email?</p>
+          </div>
+        </div>
+
+        <div fxLayout="column" fxLayoutAlign="end end">
+          <button type="button" [disabled]="!form.valid" (click)="onCheckEmail()" class="tlc-form__submit">
+            <i *ngIf="isCheckingEmail" class="fas fa-spinner fa-pulse"></i>
+            Next
+          </button>
+        </div>
+      </div>
+
+      <div *ngIf="loginScreen === 2" fxLayout="column" fxFlexFill>
+        <div class="login__section--head" fxLayout="column" fxLayoutAlign="center center">
+          <div class="login__section--img-container"> <!--  && loadProfileImage && imgUrl -->
+            <img *ngIf="loginScreen === 2" [src]="assetImgPath + 'sample-profile-photo.png'" />
+          </div>
+
+          <h3>{{ form.value.email }}</h3>
+          <p>To continue, first verify it's you</p>
+
+          <input type="password" formControlName="password" class="tlc-form__input--password" placeholder="Password" />
+
+          <div fxLayout="column" fxLayoutAlign="space-around center">
+            <p (click)="gotoForgotPassword()">Forgot Email?</p>
+          </div>
+        </div>
+
+
+        <div fxLayout="column" fxLayoutAlign="end end">
+          <button type="submit" [disabled]="!form.valid" class="tlc-form__submit">Sign in</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</ion-content>

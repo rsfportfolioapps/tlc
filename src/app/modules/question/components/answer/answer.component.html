@@ -1,0 +1,11 @@
+<div class="answer-container" [ngClass]="{'correct': answer?.isCorrect}" fxLayout="row" fxLayoutAlign="start center">
+  <span fxFlex>{{ answer?.text }}</span>
+
+  <span *ngIf="answer?.isCorrect" fxFlex="10">
+    <img [src]="assetSvgPath + 'check.svg'" />
+  </span>
+
+    <!-- <span *ngIf="!isCorrect" fxFlex="15">
+    <img [src]="assetSvgPath + 'x.svg'" />
+  </span> -->
+</div>

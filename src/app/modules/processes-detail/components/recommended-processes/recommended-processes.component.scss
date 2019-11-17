@@ -1,0 +1,87 @@
+@import 'src/theme/shared';
+
+h5 {
+  color: $color-black-1;
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.card-content {
+  height: 125px;
+}
+
+img {
+  width: 30px;
+  height: auto;
+}
+
+h4 {
+  margin-top: 0;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.recommended-process__container {
+  background-color: $color-white;
+  box-shadow: $down-top-edge-shadow;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.recommended-process__header {
+  padding: 0 20px 10px;
+}
+
+img {
+  border-radius: 4px;
+}
+
+.recommended-process--icon-info {
+  span {
+    font-size: 12px;
+  }
+}
+
+.recommended-process__card-container {
+  width: 100%;
+  overflow-x: scroll;
+  background-color: $color-white;
+  padding: 10px;
+}
+
+:host ::ng-deep {
+  p-card {
+    margin: 0;
+    width: 250px;
+  }
+
+  .ui-card {
+    box-shadow: none;
+    margin-right: 10px;
+    width: 235px;
+    padding: 0 10px 10px;
+  }
+
+  .ui-corner-all {
+    border-radius: 0;
+  }
+
+  .recommended-process__container {
+    .ui-card-title {
+      font-size: 16px;
+    }
+
+    .ui-card-body {
+      padding: 0;
+    }
+  }
+
+  .ui-card-footer {
+    padding-top: 0;
+  }
+}

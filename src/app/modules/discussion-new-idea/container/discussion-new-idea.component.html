@@ -1,0 +1,29 @@
+<ion-toolbar>
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <div fxFlex fxFlexAlign="start center">
+      <img routerLink="/dashboard/discussion" [src]="assetSvgPath + 'x.svg'" />
+    </div>
+  </div>
+</ion-toolbar>
+
+<ion-content>
+  <div class="content__container" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="20px">
+    <div *ngFor="let q of questionData" fxLayout="column">
+      <h4>{{ q?.title }}</h4>
+      <span>{{ q?.note }}</span>
+      <div class="content__question">
+        {{ q?.description }}
+      </div>
+      <span class="count">0/200</span>
+    </div>
+  </div>
+
+  <app-generic-attachment></app-generic-attachment>
+
+  <app-participants></app-participants>
+
+  <div class="mtb-40" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="20px">
+    <button type="button"><img [src]="assetSvgPath + 'tiny_check.svg'" /> <span class="ml-5">Create idea</span></button>
+  </div>
+
+</ion-content>

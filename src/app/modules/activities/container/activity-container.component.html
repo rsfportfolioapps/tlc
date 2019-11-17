@@ -1,0 +1,9 @@
+<ion-content class="activity-container">
+  <app-activity></app-activity>
+
+  <ion-fab *ngIf="!showBlockMenu" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="toggleOutBlockMenu(true, false)">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

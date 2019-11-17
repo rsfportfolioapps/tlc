@@ -1,0 +1,10 @@
+<div *ngIf="(newest$ | async) else noResult" class="newest-discussion__container">
+  <div class="newest-discussion__header" fxLayout="row" fxLayoutAlign="start end">
+    <h5>Newest <i class="fas fa-caret-down"></i></h5>
+  </div>
+  <app-discussion-card [discussions]="newest$ | async"></app-discussion-card>
+</div>
+
+<ng-template #noResult>
+  <h5>No results</h5>
+</ng-template>

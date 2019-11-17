@@ -1,0 +1,25 @@
+<div *ngFor="let pr of (myprocesses$ | async)" fxLayout="column" fxLayoutAlign="start start">
+  <p-card styleClass="ui-pr-shadow">
+    <p-header fxLayout="column" routerLink="/processes/detail/1">
+      <div fxLayout="row" fxLayoutGap="20px">
+        <div fxFlex="85" fxLayoutAlign="start center">
+          <h4 class="card__title">{{ pr.header }}</h4>
+        </div>
+        <div fxFlex="15" fxLayoutAlign="center center"> <img [src]="assetSvgPath + 'options_dark.svg'" /></div>
+      </div>
+    </p-header>
+
+    <div *ngIf="pr.description" class="card__description">{{ pr.description }}</div>
+
+    <p-footer fxLayout="row">
+      <div routerLink="/ari/complete" fxLayoutAlign="start center" fxFlex="60">
+        <img [src]="assetSvgPath + 'ari.svg'" />
+        <span fxLayoutAlign="end center">complete with ARI</span>
+      </div>
+      <div fxFlex="40" class="my-pr__actions-info" fxLayout="row" fxLayoutAlign="end center">
+        <span fxLayoutAlign="center center" *ngFor="let action of pr.actions" (click)="onClick(action, pr)">
+          <img [src]="assetSvgPath + action.icon" />{{ action.text  }}</span>
+      </div>
+    </p-footer>
+  </p-card>
+</div>

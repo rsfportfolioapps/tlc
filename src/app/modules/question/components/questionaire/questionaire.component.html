@@ -1,0 +1,4 @@
+
+<ng-container *ngFor="let question of (questions$ | async)">
+  <app-question [question]="question"></app-question>
+</ng-container>

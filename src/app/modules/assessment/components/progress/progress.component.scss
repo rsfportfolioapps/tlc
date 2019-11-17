@@ -1,0 +1,31 @@
+@import 'src/theme/shared';
+
+.circle {
+  border-radius: 50%;
+  height: 18px;
+  background-repeat: no-repeat;
+  width: 20px;
+  background-position-x: 5px;
+
+  img {
+    height: 20px;
+    width: 26px;
+    position: relative;
+    top: -0.6px;
+  }
+}
+
+.bg-green {
+  background-color: $color-green;
+}
+
+.bg-gray {
+  background-color: $color-gray;
+}
+
+.progress-container {
+  .h-line {
+    border-bottom: 2px $color-gray solid;
+    width: 20px;
+  }
+}

@@ -1,0 +1,20 @@
+<div fxLayout="column" class="card__rank">
+  <div routerLink="/rank" class="card__rank--content" fxFlex="100" fxLayout="row">
+    <div fxFlex="12" fxLayoutAlign="start start">
+      <div class="card__rank--number">17</div>
+    </div>
+    <div fxFlex="88" fxLayout="column" fxLayoutAlign="end start">
+      <h1>Rank 17</h1>
+      <div class="card__rank--content__desc">St George Planning Group</div>
+    </div>
+  </div>
+
+  <div fxFlex="100">
+    <p-progressBar [value]="25"></p-progressBar>
+  </div>
+
+  <div class="card__rank--footer" fxFlex="100" fxLayout="row">
+    <span fxLayoutAlign="center center" class="card__rank--badge"><img [src]="assetSvgPath + 'score.svg'" />30/40</span>
+    <span fxLayoutAlign="center center" class="card__rank--badge-text">due 10.9.2019</span>
+  </div>
+</div>

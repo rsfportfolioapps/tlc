@@ -1,0 +1,9 @@
+<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+  <img [matMenuTriggerFor]="menu" [src]="assetSvgPath + 'options_dark.svg'" />
+  <mat-menu #menu="matMenu">
+    <button *ngFor="let menu of menus" fxLayoutAlign="start center" [routerLink]="menu.route" mat-menu-item>
+      <img [src]="assetSvgPath + menu.icon " />
+      <span class="menu-text">{{ menu.text }}</span>
+    </button>
+  </mat-menu>
+</div>

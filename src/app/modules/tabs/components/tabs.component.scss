@@ -1,0 +1,20 @@
+
+@import 'src/theme/variables.scss';
+
+
+
+:host ::ng-deep {
+  ion-tab-bar {
+    box-shadow: $down-top-edge-shadow;
+  }
+
+  ion-tab-button {
+    p {
+      margin: 0;
+      font-size: 12px;
+      color: $color-primary;
+    }
+  }
+}
+
+

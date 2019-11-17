@@ -1,0 +1,6 @@
+<div class="my-discussion__container">
+  <div class="my-discussion__header" fxLayout="row" fxLayoutAlign="start end">
+    <h5>SAVED DISCUSSION</h5>
+  </div>
+  <app-discussion-card [isSaved]="true" [discussions]="savedDiscussions$ | async"></app-discussion-card>
+</div>

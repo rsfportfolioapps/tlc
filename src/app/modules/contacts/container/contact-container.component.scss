@@ -1,0 +1,72 @@
+@import "src/theme/shared";
+
+.down-edge-shadow {
+  box-shadow: $down-top-edge-shadow !important;
+}
+
+.contact-search__container {
+  padding: 10px;
+}
+
+.contact-list__container {
+  padding: 10px 5px;
+}
+
+.contact-pymk__container {
+  margin: 10px;
+}
+
+.item {
+  width: 60px;
+  min-width: 60px;
+}
+
+.selected-contact__container {
+  padding: 10px;
+  border-bottom: thin $color-gray solid;
+
+  img:not(.close-selected) {
+    height: 40px;
+  }
+
+  .list {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .item {
+    width: 60px;
+    min-width: 60px;
+  }
+}
+
+img.close-selected {
+  height: 20px;
+  position: relative;
+  left: -12px;
+}
+
+.c__icon-panel {
+  height: 55px;
+  min-height: 55px;
+  max-height: 55px;
+
+  >div {
+    background-color: $color-primary;
+  }
+
+  span {
+    padding: 0;
+    margin: 0;
+    color: $color-white;
+    font-size: 12px;
+  }
+}
+
+:host ::ng-deep {
+  ion-toolbar {
+    span {
+      font-size: 16px;
+    }
+  }
+}

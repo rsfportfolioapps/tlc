@@ -1,0 +1,27 @@
+@import 'src/theme/variables.scss';
+
+img {
+  height: 30px;
+}
+
+h4 {
+  margin-left: 10px;
+}
+
+:host ::ng-deep {
+  p-card {
+    width: 100%;
+  }
+
+  .ui-card {
+    margin: 5px;
+  }
+
+  .ui-card-shadow {
+    border-radius: 0;
+  }
+
+  .ui-card-footer {
+    padding-top: 0;
+  }
+}

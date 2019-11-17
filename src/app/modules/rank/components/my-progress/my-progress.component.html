@@ -1,0 +1,24 @@
+<p>My progress</p>
+
+<div fxLayout="column" fxLayoutGap="10px">
+  <p-card *ngFor="let i of [0, 1, 2, 3]">
+    <p-header fxLayout="row">
+      <div fxLayout="row" fxFlex="100">
+        <div fxFlex="20" fxLayoutAlign="start center" class="header">
+          <img [src]="assetImgPath + 'my-discussion-2.png'">
+        </div>
+        <div fxLayout="column" fxFlex="80">
+          <h5>PD - Ethics</h5>
+          <small>8 Episodes</small>
+        </div>
+      </div>
+    </p-header>
+    <p-footer fxLayout="column" fxLayoutGap="10px">
+      <div class="badges" fxLayoutAlign="start center">
+        <span fxLayoutAlign="center center" *ngFor="let badge of badges" [attr.class]="badge.class">
+          <img *ngIf="badge.icon" [src]="assetSvgPath + badge.icon" />
+          {{ badge.text }}</span>
+      </div>
+    </p-footer>
+  </p-card>
+</div>

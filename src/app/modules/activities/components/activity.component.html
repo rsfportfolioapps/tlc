@@ -1,0 +1,25 @@
+<div *ngFor="let act of (activities$ | async)" fxLayout="column" fxLayoutAlign="start start">
+  <p-card styleClass="ui-act-shadow">
+    <p-header fxLayout="column">
+      <div fxLayout="row" fxFlex="100">
+        <div routerLink="/activities/board" fxFlex="90" fxLayoutAlign="start center">
+          <h4>{{ act.header }}</h4>
+        </div>
+        <div fxFlex="10" fxLayoutAlign="center center"> <img [src]="assetSvgPath + '/options_dark.svg'" /></div>
+      </div>
+    </p-header>
+
+    <p-footer fxLayout="column" fxLayoutGap="10px">
+      <div class="badges" fxLayout="row" fxLayoutAlign="start center">
+        <span fxLayoutAlign="center center" *ngFor="let badge of act.badges" [attr.class]="badge.class">
+          <img *ngIf="badge.icon" [src]="assetSvgPath + badge.icon" />
+          {{ badge.text }}</span>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="start space-evenly" fxLayoutGap="20px">
+        <span fxLayoutAlign="center center" *ngFor="let action of act.actions" (click)="onClick(action, act)">
+          <img [src]="assetSvgPath + action.icon" />{{ action.text  }}</span>
+      </div>
+    </p-footer>
+  </p-card>
+</div>

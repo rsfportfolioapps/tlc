@@ -1,0 +1,44 @@
+<div class="due-soonest__container">
+  <div class="due-soonest__header" fxLayout="row" fxLayoutAlign="start end">
+    <h5>DUE SOONEST</h5>
+  </div>
+  <div *ngFor="let ds of (dueSoonest$ | async)" fxLayout="column" fxLayoutAlign="start start">
+    <p-card [header]="ds.header" [subheader]="ds.subHeader" styleClass="ui-card-shadow">
+      <p-header fxLayout="column">
+        <div [ngClass]="{'due-soonest__header-channel': ds.type === 1}" fxLayout="row" fxFlex="100">
+          <div fxFlex="90" fxLayout="column">
+            <div fxFlex="100" fxLayoutAlign="start center">
+              <span *ngIf="ds.type === 1" class="due-soonest__channel font-white" (click)="gotoLink(ds.type)">CHANNEL</span></div>
+            <div fxFlex="100" fxLayoutAlign="start center">
+              <h3 *ngIf="ds.title" [ngClass]="{'font-white': ds.type === 1}">{{ ds.title }}</h3>
+            </div>
+          </div>
+          <div fxFlex="10" fxLayoutAlign="center center"> <img [src]="assetSvgPath + 'options_dark.svg'" /></div>
+        </div>
+        <div fxLayout="row" fxFlex="100">
+          <img [src]="ds.imgUrl">
+        </div>
+      </p-header>
+
+      <div *ngIf="ds.description" class="card__description">{{ ds.description }}</div>
+      <div *ngIf="ds.subDescription" class="card__sub-description">{{ ds.subDescription }}</div>
+      <div *ngIf="ds.dueDate" class="card__due-date">{{ ds.dueDate }}</div>
+
+      <p-footer>
+        <div class="badges" fxLayout="row wrap" fxLayoutAlign="start center">
+          <span fxLayoutAlign="center center" *ngFor="let badge of ds.badges" [attr.class]="badge.class"><img
+                 [src]="assetSvgPath + badge.icon" />
+            {{ badge.text }}</span>
+        </div>
+
+        <div class="due-soonest__actions-info" fxLayout="row" fxLayoutAlign="space-between center">
+          <span fxLayoutAlign="center center" class="trophy"><img
+                 [src]="assetSvgPath + 'baseline-person-24px.svg'" />21</span>
+          <span fxLayoutAlign="center center" class="comment"><img [src]="assetSvgPath + 'comment.svg'" /> 12</span>
+          <span fxLayoutAlign="center center" class="attach"><img [src]="assetSvgPath + 'attach_small.svg'" /> 12</span>
+          <span fxLayoutAlign="center center" class="share"><img [src]="assetSvgPath + 'baseline-share-24px.svg'" /></span>
+        </div>
+      </p-footer>
+    </p-card>
+  </div>
+</div>

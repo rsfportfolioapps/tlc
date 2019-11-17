@@ -1,0 +1,18 @@
+<div class="channel-resorces__container" fxLayout="column" fxLayoutAlign="space-around stretch" fxLayoutGap="20px">
+  <small>Channel resources</small>
+
+  <div *ngFor="let i of [0, 1, 2]" fxLayout="column">
+    <div fxLayout="row" fxLayoutAlign="start center">
+      <img src="/assets/images/thumb-img-1.png" />
+
+      <div fxFlex fxLayout="row" fxLayoutAlign="space-evenly center">
+        <div fxFlex="90" fxLayoutAlign=" center">
+          <h5>2300442.jpg</h5>
+        </div>
+        <div fxFlex="10">
+          <img [src]="assetSvgPath + 'options_dark.svg'">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

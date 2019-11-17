@@ -1,0 +1,16 @@
+<ion-toolbar color="primary" class="down-edge-shadow lc-toolbar">
+  <div fxLayout="row">
+    <div routerLink="/dashboard/learning" fxFlex="50" fxFlexOffset="3" fxLayoutAlign="start center">
+      <img [src]="assetSvgPath + 'arrow_back_white.svg'" />
+    </div>
+    <div fxFlex="50" fxLayoutAlign="end center" fxLayoutGap="20px">
+      <img [src]="assetSvgPath + 'share_white.svg'" />
+      <img [src]="assetSvgPath + 'options_white.svg'" />
+    </div>
+  </div>
+</ion-toolbar>
+
+<ion-content>
+  <app-course></app-course>
+  <app-course-assignment></app-course-assignment>
+</ion-content>

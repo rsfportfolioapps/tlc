@@ -1,0 +1,58 @@
+@import '../../../../../theme/variables.scss';
+
+.recommended-channel__container {
+  background-color: $color-white;
+
+  h5 {
+    color: $color-black-1;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 5px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.recommended-channel__header {
+  padding: 0 10px;
+}
+
+img {
+  border-radius: 4px;
+}
+
+.recommend-channel--card__container {
+  width: 100%;
+  overflow-x: scroll;
+  background-color: $color-white;
+  padding: 10px;
+}
+
+:host ::ng-deep {
+  p-card {
+    margin: 0;
+    width: 250px;
+  }
+
+  .ui-card {
+    box-shadow: none;
+    margin-right: 10px;
+    width: 235px;
+  }
+
+  .ui-corner-all {
+    border-radius: 0;
+  }
+
+  .recommend-channel--card__container {
+    .ui-card-title {
+      font-size: 16px;
+    }
+
+    .ui-card-body {
+      padding: 0;
+    }
+  }
+}

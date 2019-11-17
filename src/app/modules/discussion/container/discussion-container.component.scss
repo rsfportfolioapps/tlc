@@ -1,0 +1,43 @@
+@import "src/theme/variables.scss";
+
+.discussion__container {
+  background-color: $color-gray-2;
+}
+
+.discussion__segment {
+  background-color: $color-white !important;
+}
+
+.fab-button__inblock {
+  margin-bottom: 58px;
+}
+
+.block-ui__menu {
+  color: $color-white;
+}
+
+.block-ui__circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #64D8F0;
+  margin-left: 15px;
+
+  &.green {
+    background-color: #1FC551 !important;
+  }
+
+  &.violet {
+    background-color: #7377EE !important;
+  }
+}
+
+:host ::ng-deep {
+  ion-content {
+    --background: $color-gray-2;
+  }
+
+  ion-segment {
+    --background: $color-white !important;
+  }
+}

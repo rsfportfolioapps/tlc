@@ -1,0 +1,32 @@
+@mixin btn {
+  background: transparent;
+  height: 40px;
+  width: 100%;
+  border-radius: 20px;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+@mixin btn-default {
+  @include btn;
+  
+}
+
+@mixin btn-blue {
+  @include btn;
+
+  background-color: $color-primary;
+  color: $color-white;
+}
+
+@mixin btn-primary {
+  @include btn;
+
+  color: $color-white;
+  background-color: $color-primary;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}

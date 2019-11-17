@@ -1,0 +1,19 @@
+<div>
+  <div class="recommended-process__container">
+    <div class="recommended-process__header" fxLayout="row">
+      <p>Recommended processess</p>
+    </div>
+    <div fxLayout="row" class="recommended-process__card-container" fxLayoutAlign="start start">
+      <p-card *ngFor="let rp of recommendedProcess$ | async" styleClass="ui-card-shadow">
+        <p-header>
+          <h4>{{ rp.header }}</h4>
+        </p-header>
+        <div class="card-content">{{ rp.description }}</div>
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+          <img [src]="assetSvgPath + 'ari.svg'" />
+          <span>Complete with ari</span>
+        </div>
+      </p-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+{
+  "name": "tlcMobileApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

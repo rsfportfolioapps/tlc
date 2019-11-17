@@ -1,0 +1,17 @@
+@import 'src/theme/shared';
+
+.btn-cancel {
+  @include btn-default;
+}
+
+.btn-ask-an-expert {
+  @include btn-blue;
+
+  padding: 5px 15px;
+}
+
+:host ::ng-deep {
+  .mat-dialog-container {
+    padding: 5px;
+  }
+}

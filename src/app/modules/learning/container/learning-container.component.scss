@@ -1,0 +1,26 @@
+@import 'src/theme/variables.scss';
+
+h5.view-completed {
+  margin-bottom: 20px;
+  cursor: pointer;
+  padding: 0 10px;
+  color: $color-primary;
+}
+
+.learning__container {
+  background-color: $color-gray-2;
+}
+
+.learning__segment {
+  background-color: $color-white !important;
+}
+
+:host ::ng-deep {
+  ion-content {
+    --background: $color-gray-2;
+  }
+  
+  ion-segment {
+    --background: $color-white !important;
+  }
+}

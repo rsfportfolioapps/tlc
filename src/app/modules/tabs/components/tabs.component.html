@@ -1,0 +1,33 @@
+<app-toolbar [shadowArr]="getActiveTab"></app-toolbar>
+<ion-content>
+  <app-sidenav></app-sidenav>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom" [selectedTab]="1">
+      <ion-tab-button (click)="selectTab(tabs.dashboard)" tab="home">
+        <img [src]="assetSvgPath + 'home.svg'" />
+        <p *ngIf="getActiveTab === tabs.dashboard">Home</p>
+      </ion-tab-button>
+
+      <ion-tab-button (click)="selectTab(tabs.learning)" tab="learning">
+        <img [src]="assetSvgPath + 'learn.svg'" />
+        <p *ngIf="getActiveTab == tabs.learning">Learning</p>
+      </ion-tab-button>
+
+      <ion-tab-button (click)="selectTab(tabs.discussion)" tab="discussion">
+        <img [src]="assetSvgPath + 'chats.svg'" />
+        <p *ngIf="getActiveTab === tabs.discussion">Discussion</p>
+      </ion-tab-button>
+
+      <ion-tab-button (click)="selectTab(tabs.activities)" tab="activities">
+        <img [src]="assetSvgPath + 'activities.svg'" />
+        <p *ngIf="getActiveTab === tabs.activities">Activities</p>
+      </ion-tab-button>
+
+      <ion-tab-button (click)="selectTab(tabs.processes)" tab="processes">
+        <img [src]="assetSvgPath + 'processess.svg'" />
+        <p *ngIf="getActiveTab === tabs.processes">Processess</p>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

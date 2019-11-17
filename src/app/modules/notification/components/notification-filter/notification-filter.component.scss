@@ -1,0 +1,42 @@
+@import 'src/theme/shared';
+
+.notification__bubble {
+  background-color: $color-gray-1;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin: 5px 0;
+}
+
+.notification__bubble_chat-container {
+  padding: 0 20px;
+  text-align: center;
+}
+
+.notification__bubble_q-container {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 100vw;
+  height: 50px;
+  padding: 0 20px;
+  min-height: 50px;
+  max-height: 50px;
+  border-bottom: thin $color-gray solid;
+}
+
+.notification__bubble--link {
+  background-color: $color-white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin: 10px 0;
+  border: thin $color-gray solid;
+  font-size: 14px;
+  color: $color-black-1;
+  white-space: nowrap;
+  margin-right: 10px;
+
+  &.active {
+    border: thin #E5EBFF solid;
+    background-color: #E5EBFF;
+    color: $color-primary;
+  }
+}

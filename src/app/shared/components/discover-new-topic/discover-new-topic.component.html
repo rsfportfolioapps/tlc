@@ -1,0 +1,29 @@
+<div>
+  <h5 class="ml-10">DISCOVER NEW TOPICS</h5>
+
+  <div class="discover-new-topic__container">
+    <div class="discover-new-topic__header" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="20px">
+      <p>Recommended discussions for you</p>
+    </div>
+    <div fxLayout="row" class="discover-new-topic__card-container" fxLayoutAlign="start start">
+      <p-card *ngFor="let dnt of discoverNewTopic$ | async" styleClass="ui-card-shadow">
+        <p-header>
+          <img *ngIf="dnt.imgUrl" [src]="dnt.imgUrl">
+        </p-header>
+        <h5 *ngIf="dnt.imgUrl">{{ dnt.description }}</h5>
+        <p-footer fxLayout="column" fxLayoutGap="10px">
+          <div class="discover-new-topic__icon-info" fxLayout="row" fxLayoutAlign="start center">
+            <span fxLayoutAlign="center center" *ngFor="let badge of dnt.badges" [attr.class]="badge.class">
+              <img *ngIf="badge.icon" [src]="assetSvgPath + badge.icon" />
+              {{ badge.text }}</span>
+          </div>
+
+          <div class="badges" fxLayout="row" fxLayoutAlign="start center">
+            <span fxLayoutAlign="center center" *ngFor="let action of dnt.actions">
+              <img [src]="assetSvgPath + action.icon" />{{ action.text }}</span>
+          </div>
+        </p-footer>
+      </p-card>
+    </div>
+  </div>
+</div>

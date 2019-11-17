@@ -1,0 +1,36 @@
+<ion-content>
+  <div class="notification__header" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+    <div fxFlex>
+      Mark all as read
+    </div>
+    <div fxFlex="10">
+      <img class="c-pointer" (click)="showFilter = !showFilter" [src]="assetSvgPath + 'sort_dark.svg'" />
+    </div>
+    <div fxFlex="10">
+      <img class="c-pointer" [src]="assetSvgPath + 'settings.svg'" />
+    </div>
+  </div>
+
+  <ng-container *ngIf="showFilter">
+    <app-notification-filter></app-notification-filter>
+  </ng-container>
+
+  <div class="notification__list" fxLayout="column" fxLayoutAlign="start start">
+    <div class="list-item" *ngFor="let i of [0, 1, 2, 3, 4, 5]" fxLayoutGap="10px">
+      <div fxFlex="1">
+
+      </div>
+      <div fxFlex="9">
+        <img [src]="assetImgPath + 'sample_pic.png'" />
+      </div>
+      <div fxFlex>
+        <span class="notification__name">Jenny Flit replied:</span>
+        <span>
+          is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          standard dummy text ever since the 1500s
+        </span>
+        <div class="notification__timestamp">1 hour ago</div>
+      </div>
+    </div>
+  </div>
+</ion-content>

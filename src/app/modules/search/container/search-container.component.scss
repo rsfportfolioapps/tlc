@@ -1,0 +1,41 @@
+@import 'src/theme/shared';
+
+input {
+  @include tlc-input-search;
+}
+
+.search-category__container {
+  width: 100%;
+  overflow-x: scroll;
+  background-color: $color-white;
+  padding: 0;
+  margin: 6px;
+  height: 40px;
+  min-height: 40px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+:host ::ng-deep {
+  p-card {
+    width: calc(100% - 10px);
+
+    &.people .ui-card-body {
+      padding: 0 !important;
+    }
+  }
+
+  ion-toolbar {
+    box-shadow: $down-edge-shadow;
+    padding: 0 5px;
+  }
+
+  ion-item {
+    img {
+      margin-right: 0;
+      width: 40px;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import "src/theme/variables.scss";
+
+.md-container {
+  padding: 20px;
+}
+
+h5 {
+  margin-top: 20px;
+}
+
+button {
+  background-color: #003CFF;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: $color-white;
+}
+
+.md-footer {
+  margin: 20px;
+}
+
+:host ::ng-deep {
+  ion-select {
+    width: 220px;
+    background: $color-gray-2;
+    border-radius: 4px;
+  }
+
+  ion-toolbar {
+    padding: 0 5px 0 10px;
+    -webkit-box-shadow: -1px 0px 5px 0px $color-gray;
+    -moz-box-shadow: -1px 0px 5px 0px $color-gray;
+    box-shadow: -1px 0px 5px 0px $color-gray;
+  }
+}

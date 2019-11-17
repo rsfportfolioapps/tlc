@@ -1,0 +1,61 @@
+<div class="bc__container">
+  <ion-slides [options]="sliderConfig">
+    <ion-slide *ngFor="let b of boards">
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <div class="bc-header" [ngClass]="b.class" fxLayoutAlign="start center">
+          <div fxFlex="70" class="board__title" fxLayoutAlign="start center">{{ b.name }}</div>
+          <div fxFlex="15" fxLayoutAlign="center center">
+            <img [src]="assetSvgPath + 'sort_white.svg'" />
+          </div>
+          <div fxFlex="15" fxLayoutAlign="center center">
+            <img (click)="presentPopover($event)" [src]="assetSvgPath + 'options_white.svg'" />
+          </div>
+        </div>
+
+        <div class="slide-container">
+          <div *ngFor="let bc of (myBoardCards$ | async)" fxLayout="column" fxLayoutAlign="start start">
+            <p-card [header]="bc.header" [subheader]="bc.subHeader" fxLayoutGap="20px" styleClass="ui-card-shadow">
+              <p-header fxLayout="column">
+                <div fxLayout="row" fxFlex="100" fxLayoutAlign="center center">
+                  <div fxFlex="85" fxLayout="column">
+                    <div class="bc__header--title" fxLayoutAlign="start center">
+                      <h5 *ngIf="bc.title">{{ bc.title }}</h5>
+                    </div>
+                  </div>
+                  <div fxFlex="15" class="ellipse-icon" fxLayoutAlign="center center"> <img
+                         [src]="assetSvgPath + 'options_dark.svg'" /></div>
+                </div>
+                <div fxLayout="row">
+                  <img [src]="bc.imgUrl">
+                </div>
+              </p-header>
+
+              <div *ngIf="bc.description" class="card__description">{{ bc.description }}</div>
+              <div *ngIf="bc.subDescription" class="card__sub-description">{{ bc.subDescription }}</div>
+              <div *ngIf="bc.dueDate" class="card__due-date">{{ bc.dueDate }}</div>
+
+              <p-footer>
+                <div class="badges" fxLayout="row wrap" fxLayoutAlign="start center">
+                  <span fxLayoutAlign="center center" *ngFor="let badge of bc.badges" [attr.class]="badge.class"><img
+                         [src]="assetSvgPath + badge.icon" />
+                    {{ badge.text }}</span>
+                </div>
+
+                <div class="al--actions-info" fxLayout="row" fxLayoutAlign="space-between center">
+                  <span fxLayoutAlign="center center" class="trophy"><img
+                         [src]="assetSvgPath + 'baseline-person-24px.svg'" />21</span>
+                  <span fxLayoutAlign="center center" class="comment"><img [src]="assetSvgPath + 'comment.svg'" />
+                    12</span>
+                  <span fxLayoutAlign="center center" class="attach"><img [src]="assetSvgPath + 'attach_small.svg'" />
+                    12</span>
+                  <span fxLayoutAlign="center center" class="share"><img
+                         [src]="assetSvgPath + 'baseline-share-24px.svg'" /></span>
+                </div>
+              </p-footer>
+            </p-card>
+          </div>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</div>

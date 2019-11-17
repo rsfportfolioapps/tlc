@@ -1,0 +1,64 @@
+@import "src/theme/shared";
+
+.dng-photo__container {
+  padding: 20px;
+
+  .dng-photo {
+    background-color: $color-primary;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row;
+  }
+  span {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+}
+
+.dng-form-input {
+  max-width: 285px;
+  width: 285px;
+  margin: 0 auto;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  
+  span {
+    font-size: 12px;
+    margin-bottom: 20px !important;
+    color: $color-black-1;
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+}
+
+:host ::ng-deep {
+  .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+    &:first-child {
+      padding: 0;
+    }
+  }
+
+  .mat-form-field-label {
+    top: 15px;
+    left: 10px;
+  }
+
+  .mat-input-element {
+    position: relative;
+    top: -6px;
+    left: 10px;
+  }
+
+  .mat-form-field-flex {
+    background-color: $color-gray-2;
+  }
+
+  .mat-form-field-underline {
+    display: none;
+  }
+}

@@ -1,0 +1,58 @@
+<ion-toolbar class="down-edge-shadow">
+  <div fxLayout="row">
+    <div routerLink="/dashboard/home" fxFlex="50" fxFlexOffset="3" fxLayoutAlign="start center">
+      <img [src]="assetSvgPath + 'arrow_back.svg'" />
+      <span>Contacts</span>
+    </div>
+    <div fxFlex="50" fxLayoutAlign="end center" fxLayoutGap="20px">
+    </div>
+  </div>
+</ion-toolbar>
+
+<ion-content class="contact-container">
+  <div class="contact-search__container">
+    <app-contact-search></app-contact-search>
+  </div>
+
+  <div class="selected-contact__container">
+    <div fxLayout="row" class="list" fxLayoutAlign="start start">
+      <div class="item" *ngFor="let contact of selectedContacts">
+        <img [src]="assetImgPath + contact?.img" />
+        <img class="close-selected" (click)="onRemove(contact)" [src]="assetSvgPath + 'remove_selected.svg'" />
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-list__container">
+    <app-contact-list (changeEmitter)="onSelectedContacts($event)"></app-contact-list>
+  </div>
+
+  <div class="contact-pymk__container" fxLayout="column" fxLayoutGap="20px">
+    <small>People you may know</small>
+    <app-contact-list></app-contact-list>
+  </div>
+</ion-content>
+
+<ion-content class="c__icon-panel">
+  <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="20px" fxFlexFill>
+    <div *ngIf="selectedContacts && selectedContacts.length > 0" fxLayout="column" fxLayoutAlign="center center">
+      <img [src]="assetSvgPath + 'move.svg'" />
+      <span>Move</span>
+    </div>
+
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <img [src]="assetSvgPath + 'add_users.svg'" />
+      <span>Add</span>
+    </div>
+
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <img [src]="assetSvgPath + 'remove.svg'" />
+      <span>Remove</span>
+    </div>
+
+    <div *ngIf="selectedContacts && selectedContacts.length > 0" fxLayout="column" fxLayoutAlign="center center">
+      <img [src]="assetSvgPath + 'edit.svg'" />
+      <span>Rename</span>
+    </div>
+  </div>
+</ion-content>

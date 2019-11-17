@@ -1,0 +1,10 @@
+<div *ngIf="(myDiscussions$ | async) else noResult" class="my-discussion__container">
+  <div class="my-discussion__header" fxLayout="row" fxLayoutAlign="start end">
+    <h5>MY DISCUSSION</h5>
+  </div>
+  <app-discussion-card [discussions]="myDiscussions$ | async"></app-discussion-card>
+</div>
+
+<ng-template #noResult>
+  <h5>No results</h5>
+</ng-template>

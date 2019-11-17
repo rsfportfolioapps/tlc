@@ -1,0 +1,25 @@
+<ion-toolbar class="down-edge-shadow">
+  <div fxLayout="row">
+    <div routerLink="/dashboard/discussion" fxFlex="50" fxFlexOffset="3" fxLayoutAlign="start center">
+      <img [src]="assetSvgPath + 'arrow_back.svg'" />
+    </div>
+    <div fxFlex="50" fxLayoutAlign="end center" fxLayoutGap="20px">
+      <img [src]="assetSvgPath + 'baseline-share-24px.svg'" />
+      <img [src]="assetSvgPath + 'bookmark_dark.svg'" />
+      <img [src]="assetSvgPath + 'search.svg'" />
+      <app-dropdown-menu></app-dropdown-menu> <!--  [menus]="menus" -->
+    </div>
+  </div>
+</ion-toolbar>
+
+<ion-content>
+  <app-main-info></app-main-info>
+
+  <app-attachments></app-attachments>
+
+  <app-participants></app-participants>
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <button (click)="showLeaveDialog()" class="btn-primary">Leave discussion</button>
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,12 @@
+<ion-toolbar class="down-edge-shadow">
+  <div fxLayout="row">
+    <div routerLink="/dashboard/home" fxFlex fxLayoutAlign="start center">
+      <img [src]="assetSvgPath + 'arrow_back.svg'" />
+      <span>Personal Information</span>
+    </div>
+  </div>
+</ion-toolbar>
+
+<ion-content>
+  <app-account-detail></app-account-detail>
+</ion-content>

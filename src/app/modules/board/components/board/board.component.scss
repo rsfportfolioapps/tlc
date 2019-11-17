@@ -1,0 +1,59 @@
+@import "src/theme/variables";
+
+:host  {
+  margin: 20px;
+}
+
+.bc__header--title{
+  min-height: 40px;
+  max-height: 40px;
+  padding: 0 10px;
+}
+
+.slide-container {
+  width: 300px;
+}
+
+.black {
+  background-color: #313943 !important;
+}
+
+.primary {
+  background-color: #238AFF !important;
+}
+
+.cyan {
+  background-color: #27ABB5 !important;
+}
+
+.green {
+  background-color: #1FC551 !important;
+}
+
+.bc-header {
+  width: 100%;
+  background-color: $color-primary-1;
+  padding: 10px;
+  color: $color-white;
+  border-radius: 3px;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.ellipse-icon {
+  height: 30px;
+}
+
+:host ::ng-deep {
+  ion-slide {
+    // width: 325px;
+  }
+
+  p-card {
+    margin: 10px 0 0 0 !important;
+  }
+}

@@ -1,0 +1,21 @@
+@import 'src/theme/shared';
+
+.answer-container {
+  border: thin $color-gray solid;
+  border-radius: 4px;
+  min-height: 40px;
+  padding: 10px;
+  
+  span {
+    font-size: 14px;
+  }
+
+  img {
+    height: 30px;
+  }
+
+  &.correct {
+    background-color: $color-green-bg;
+    border-color: $color-green !important;
+  }
+}

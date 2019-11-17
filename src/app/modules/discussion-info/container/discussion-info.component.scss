@@ -1,0 +1,12 @@
+
+@import 'src/theme/shared';
+
+.btn-primary {
+  @include btn-primary;
+
+  font-size: 14px;
+  padding: 5px 14px;
+  box-shadow: 0 8px 6px -6px #333;
+  position: relative;
+  left: -35px;
+}

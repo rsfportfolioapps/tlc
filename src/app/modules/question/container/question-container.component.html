@@ -1,0 +1,16 @@
+<ion-toolbar class="down-edge-shadow">
+  <div fxLayout="row">
+    <div routerLink="/assessment" fxFlex="50" fxFlexOffset="3" fxLayoutAlign="start center">
+      <img [src]="assetSvgPath + 'x.svg'" />
+      <span>Question 1/6</span>
+    </div>
+    <div fxFlex="50" fxLayoutAlign="end center" fxLayoutGap="20px">
+    </div>
+  </div>
+</ion-toolbar>
+
+<ion-content>
+  <div class="question-container">
+    <router-outlet></router-outlet>
+  </div>
+</ion-content>

@@ -1,0 +1,15 @@
+<div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="20px">
+  <div>
+    <small>Progress</small>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <div class="progress-container" fxLayout="row" fxLayoutAlign="space-around center"
+         *ngFor="let i of [0, 1, 2, 3, 4]; let last = last">
+      <div class="circle" [ngClass]="i < 2 ? 'bg-green' : 'bg-gray'">
+        <img [src]="assetSvgPath + 'check_gray-1.svg'" />
+      </div>
+      <div *ngIf="!last" class="h-line"></div>
+    </div>
+  </div>
+</div>

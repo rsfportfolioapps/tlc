@@ -1,0 +1,56 @@
+<ion-toolbar>
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <div fxFlex="70" fxFlexAlign="start center">
+      <i routerLink="/dashboard/learning" class="fas fa-arrow-left"></i>
+      Completed Learnings
+    </div>
+    <div fxFlex="30" fxLayoutAlign="end start">
+      <img [src]="assetSvgPath + 'search.svg'" />
+      <img [src]="assetSvgPath + 'options_dark.svg'" />
+    </div>
+  </div>
+</ion-toolbar>
+
+<ion-content class="c-l__container">
+  <div class="c-l__sort-container" fxLayout="row" fxFlexAlign="space-evenly center" fxLayoutGap="10px">
+    <img [src]="assetSvgPath + 'sort_dark.svg'" />
+    <h5>Sort</h5>
+  </div>
+  
+  <div *ngFor="let cl of (completedLearning$ | async)" fxLayout="column" fxLayoutAlign="start start">
+    <p-card [header]="cl.header" [subheader]="cl.subHeader" styleClass="ui-card-shadow">
+      <p-header fxLayout="column">
+        <div [ngClass]="{'c-l--header-channel': cl.type === 1}" fxLayout="row" fxFlex="100">
+          <div fxFlex="90" fxLayout="column">
+            <div fxFlex="100" fxLayoutAlign="start center"><span *ngIf="cl.type === 1"
+                    class="c-l--channel font-white">CHANNEL</span></div>
+            <div fxFlex="100" fxLayoutAlign="start center">
+              <h3 *ngIf="cl.title" [ngClass]="{'font-white': cl.type === 1}">{{ cl.title }}</h3>
+            </div>
+          </div>
+          <div fxFlex="10" fxLayoutAlign="center center"> <img [src]="assetSvgPath + 'options_dark.svg'" /></div>
+        </div>
+        <div fxLayout="row" fxFlex="100">
+          <img [src]="cl.imgUrl">
+        </div>
+      </p-header>
+
+      <div *ngIf="cl.description" class="card__description">{{ cl.description }}</div>
+      <div *ngIf="cl.subDescription" class="card__sub-description">{{ cl.subDescription }}</div>
+      <div *ngIf="cl.dueDate" class="card__due-date">{{ cl.dueDate }}</div>
+
+      <p-footer>
+        <div class="badges" fxLayout="row wrap" fxLayoutAlign="start center">
+          <span fxLayoutAlign="center center" *ngFor="let badge of cl.badges" [attr.class]="badge.class"><img
+                 [src]="assetSvgPath + badge.icon" />
+            {{ badge.text }}</span>
+        </div>
+
+        <div class="c-l__actions-info" fxLayout="row" fxLayoutAlign="space-between center">
+          <span fxLayoutAlign="center center" *ngFor="let action of cl.actions">
+            <img [src]="assetSvgPath + action.icon" />{{ action.text }}</span>
+        </div>
+      </p-footer>
+    </p-card>
+  </div>
+</ion-content>

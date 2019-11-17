@@ -1,0 +1,45 @@
+<div class="al__container">
+  <div class="al__header" fxLayout="row" fxLayoutAlign="start end">
+    <h5>ASSIGNED LEARNING</h5>
+  </div>
+  <div *ngFor="let al of (assignedLearning$ | async)" fxLayout="column" fxLayoutAlign="start start">
+    <p-card [header]="al.header" [subheader]="al.subHeader" styleClass="ui-card-shadow">
+      <p-header fxLayout="column" (click)="gotoLink(al.type)">
+        <div [ngClass]="headerClass(al.type)" fxLayout="row" fxFlex="100">
+          <div class="" fxFlex="90" fxLayout="column">
+            <div fxFlex="100" fxLayoutAlign="start center">
+              <span *ngIf="isType(al.type)" class="al__channel font-white">{{ assignedCategory(al.type) }}</span></div>
+            <div fxFlex="100" fxLayoutAlign="start center">
+              <h3 *ngIf="al.title" [ngClass]="{'font-white': isType(al.type)}">{{ al.title }}</h3>
+            </div>
+          </div>
+          <div fxFlex="10" fxLayoutAlign="center center"> <img class="ellipse" [src]="assetSvgPath + 'options_white.svg'" />
+          </div>
+        </div>
+        <div fxLayout="row" fxFlex="100">
+          <img [src]="al.imgUrl">
+        </div>
+      </p-header>
+
+      <div *ngIf="al.description" class="card__description">{{ al.description }}</div>
+      <div *ngIf="al.subDescription" class="card__sub-description">{{ al.subDescription }}</div>
+      <div *ngIf="al.dueDate" class="card__due-date">{{ al.dueDate }}</div>
+
+      <p-footer>
+        <div class="badges" fxLayout="row wrap" fxLayoutAlign="start center">
+          <span fxLayoutAlign="center center" *ngFor="let badge of al.badges" [attr.class]="badge.class"><img
+                 [src]="assetSvgPath + badge.icon" />
+            {{ badge.text }}</span>
+        </div>
+
+        <div class="al--actions-info" fxLayout="row" fxLayoutAlign="space-between center">
+          <span fxLayoutAlign="center center" class="trophy"><img
+                 [src]="assetSvgPath + 'baseline-person-24px.svg'" />21</span>
+          <span fxLayoutAlign="center center" class="comment"><img [src]="assetSvgPath + 'comment.svg'" /> 12</span>
+          <span fxLayoutAlign="center center" class="attach"><img [src]="assetSvgPath + 'attach_small.svg'" /> 12</span>
+          <span fxLayoutAlign="center center" class="share"><img [src]="assetSvgPath + 'baseline-share-24px.svg'" /></span>
+        </div>
+      </p-footer>
+    </p-card>
+  </div>
+</div>

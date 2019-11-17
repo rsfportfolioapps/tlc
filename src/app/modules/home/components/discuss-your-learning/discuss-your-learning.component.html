@@ -1,0 +1,34 @@
+<div class="discuss-your-learning__container">
+  <div class="discuss-your-learning__header" fxLayout="row" fxLayoutAlign="start end">
+    <h5>DISCUSS YOUR LEARNINGS</h5>
+  </div>
+  <div *ngFor="let dl of dicussLearnings$ | async" fxLayout="column" fxLayoutAlign="start start">
+    <p-card [header]="dl.header" styleClass="ui-card-shadow">
+      <p-header fxLayout="row">
+        <div fxLayout="row" fxFlex="100">
+          <div fxLayoutAlign="start center" class="header" fxFlex="90">
+            <img *ngIf="dl.imgUrl" [src]="dl.imgUrl">
+          </div>
+          <div fxFlex="10" fxLayoutAlign="center center"> <img [src]="assetSvgPath + 'options_dark.svg'" /></div>
+        </div>
+      </p-header>
+
+      <div *ngIf="dl.description" class="card__description">{{ dl.description }}</div>
+      <div *ngIf="dl.subDescription" class="card__sub-description">{{ dl.subDescription }}</div>
+      <div *ngIf="dl.dueDate" class="card__due-date">{{ dl.dueDate }}</div>
+
+      <p-footer>
+        <div class="badges" fxLayout="row" fxLayoutAlign="space-between center">
+          <span fxLayoutAlign="center center" *ngFor="let badge of dl.badges" [attr.class]="badge.class">
+            <img *ngIf="badge.icon" [src]="assetSvgPath + badge.icon" />
+            {{ badge.text }}</span>
+        </div>
+
+        <div class="discuss-your-learning--actions-info" fxLayout="row" fxLayoutAlign="space-between center">
+          <span fxLayoutAlign="center center" *ngFor="let action of dl.actions">
+            <img [src]="assetSvgPath + action.icon" />{{ action.text }}</span>
+        </div>
+      </p-footer>
+    </p-card>
+  </div>
+</div>

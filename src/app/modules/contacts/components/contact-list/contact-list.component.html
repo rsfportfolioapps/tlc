@@ -1,0 +1,13 @@
+<div class="contact-list__row" *ngFor="let contact of contacts$ | async" (click)="select(contact)" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="20px">
+  <div fxFlex="15" fxLayout="row">
+    <img class="active-status" [src]="assetSvgPath + 'selected.svg'" />
+    <img [src]="assetImgPath + contact.img" />
+  </div>
+
+  <div class="contact-name" fxFlex fxLayoutAlign="start center">
+    <span>{{ contact?.name }}</span>
+  </div>
+  <!-- <div class="contact--action" fxFlex="5">
+    no icon atm
+  </div> -->
+</div>

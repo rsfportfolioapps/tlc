@@ -1,0 +1,55 @@
+@import "src/theme/shared";
+
+.toolbar__title {
+  font-weight: 500;
+  margin-left: 15px;
+}
+
+.rank-num__content {
+  border-bottom: thin $color-gray solid;
+  padding: 10px 0;
+
+  p {
+    margin: 0;
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+.rank-score__content {
+  padding: 10px 0;
+  
+  p {
+    margin: 0;
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+.rank-progress {
+  padding: 10px;
+}
+
+.card__rank--number {
+  border: thin $color-orange solid;
+  color: $color-orange;
+  border-radius: 50%;
+  padding: 3px;
+  font-size: 12px;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+}
+
+:host ::ng-deep {
+  ion-toolbar {
+    padding: 0 5px 0 10px;
+    -webkit-box-shadow: -1px 0px 5px 0px $color-gray;
+    -moz-box-shadow: -1px 0px 5px 0px $color-gray;
+    box-shadow: -1px 0px 5px 0px $color-gray;
+  }
+}

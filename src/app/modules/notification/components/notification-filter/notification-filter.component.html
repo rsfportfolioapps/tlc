@@ -1,0 +1,4 @@
+<div fxLayout="row" class="notification__bubble_q-container" scrollY="true" fxLayoutAlign="start center">
+  <span *ngFor="let filter of filters; let i = index" (click)="selectedFilter = i" class="notification__bubble--link"
+        [ngClass]="{'active': selectedFilter === i}">{{ filter?.text }}</span>
+</div>

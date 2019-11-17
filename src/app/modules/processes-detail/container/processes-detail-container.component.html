@@ -1,0 +1,40 @@
+<ion-toolbar>
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <div fxFlex="50" fxLayoutAlign="start center">
+      <img routerLink="/dashboard/processes" [src]="assetSvgPath + 'x.svg'" />
+    </div>
+    <div fxFlex="50" fxLayoutAlign="end center" fxLayoutGap="20px">
+      <img [src]="assetSvgPath + 'archive.svg'" />
+      <img [src]="assetSvgPath + 'share.svg'" />
+      <img [src]="assetSvgPath + 'options_dark.svg'" />
+    </div>
+  </div>
+</ion-toolbar>
+
+<ion-content>
+  <div fxLayout="column" fxLayoutGap="20px">
+    <div class="pd-container" fxLayout="column" fxLayoutGap="20px">
+      <app-detail></app-detail>
+      <app-list-attachments></app-list-attachments>
+      <app-summary></app-summary>
+    </div>
+
+    <div class="pd-container--sc" fxLayout="column" fxLayoutGap="20px">
+      <app-recommended-processes></app-recommended-processes>
+    </div>
+
+    <div class="pd-container--gc" fxLayout="column" fxLayoutGap="20px">
+      <app-generic-comments></app-generic-comments>
+    </div>
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <div fxLayout="row"  fxFlexFill>
+      <button fxLayout="row" fxLayoutAlign="center center" class="btn-primary" fxLayoutGap="10px">
+        <img [src]="assetSvgPath + 'ari.svg'" />
+        <span>Complete with ARI</span>
+      </button>
+    </div>
+  </ion-fab>
+
+</ion-content>

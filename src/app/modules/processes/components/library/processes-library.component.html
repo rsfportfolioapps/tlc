@@ -1,0 +1,30 @@
+
+<div class="sort-container" fxLayout="row" fxLayoutAlign="start center">
+  <h5>All categories</h5>
+  <i class="fas fa-caret-down"></i>
+</div>
+<div *ngFor="let pr of (libraryProcesses$ | async)" fxLayout="column" fxLayoutAlign="start start">
+  <p-card styleClass="ui-pr-shadow">
+    <p-header fxLayout="column">
+      <div fxLayout="row" fxFlex="100">
+        <div fxFlex="90" fxLayoutAlign="start center">
+          <h4>{{ pr.header }}</h4>
+        </div>
+        <div fxFlex="10" fxLayoutAlign="center center"> <img [src]="assetSvgPath + 'options_dark.svg'" /></div>
+      </div>
+    </p-header>
+
+    <div *ngIf="pr.description" class="card__description">{{ pr.description }}</div>
+
+    <p-footer fxLayout="row">
+      <div fxLayoutAlign="start center" fxFlex="50">
+        <img [src]="assetSvgPath + 'ari.svg'" />
+        <span>complete with ARI</span>
+      </div>
+      <div fxFlex="50" class="my-pr__actions-info" fxLayout="row" fxLayoutAlign="end center">
+        <span fxLayoutAlign="center center" *ngFor="let action of pr.actions" (click)="onClick(action, pr)">
+          <img [src]="assetSvgPath + action.icon" />{{ action.text  }}</span>
+      </div>
+    </p-footer>
+  </p-card>
+</div>

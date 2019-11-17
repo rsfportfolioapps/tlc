@@ -1,0 +1,13 @@
+<div fxLayout="row" class="kp__container" fxLayoutGap="10px">
+  <div fxLayout="column" *ngFor="let kp of knowledgePoints$ | async" class="kp__inner-container" fxLayoutAlign="space-around start">
+    <p-card>
+      <div class="kp__card" fxFlexFill fxLayout="column" fxLayoutAlign="space-around start">
+        <div fxFlex="40" fxLayoutAlign="center center">
+          <img [src]="assetSvgPath + 'certificate_small.svg'">
+        </div>
+        <div class="kp_title" fxFlex="60">{{ kp.title }}</div>
+      </div>
+    </p-card>
+    <div class="kp__date" fxLayoutAlign="center center">01.02.2019</div>
+  </div>
+</div>

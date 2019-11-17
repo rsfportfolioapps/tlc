@@ -1,0 +1,14 @@
+<div class="review-container" fxLayout="column" fxLayoutAlign="center center">
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <img [src]="assetSvgPath + 'rate.svg'" />
+    <div>4.5</div>
+  </div>
+  <small>12 reviews</small>
+
+  <div class="rate-empty__container" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px">
+    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="5px">
+      <img *ngFor="let i of [0, 1, 2, 3, 4]" [src]="assetSvgPath + 'rate_empty.svg'" />
+    </div>
+    <span>Rate this channel</span>
+  </div>
+</div>

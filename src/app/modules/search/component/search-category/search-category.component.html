@@ -1,0 +1,5 @@
+<div (click)="select()" fxLayout="row" fxLayoutAlign="start center" class="category" [ngClass]="{'selected': isSelected}" fxLayoutGap="5px" >
+  <img *ngIf="!isSelected" [src]="assetSvgPath + category.icon" />
+  <img *ngIf="isSelected" [src]="assetSvgPath + 'check_selected.svg'" />
+  <span>{{ category.name }}</span>
+</div>

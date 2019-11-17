@@ -1,0 +1,34 @@
+<ion-toolbar>
+  <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+    <img routerLink="/dashboard/home" [src]="assetSvgPath + 'arrow_back.svg'" />
+    <input fxFlex type="text" placeholder="Type to search" />
+  </div>
+</ion-toolbar>
+
+<ion-content>
+  <div fxLayout="row" class="search-category__container" fxLayoutAlign="start center">
+    <app-search-category *ngFor="let category of searchCategory" (categoryEmitter)="selectedId = $event"
+                         [category]="category"></app-search-category>
+  </div>
+
+  <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+    <app-continue-learning></app-continue-learning>
+
+    <!-- refactor selectedID -->
+    <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px" fxFlexFill>
+      <div fxLayout="row" class="w-100" fxFlex fxLayoutAlign="start center" fxLayoutGap="5px">
+        <h4 fxFlexOffset="2">People</h4>
+      </div>
+
+      <p-card class="people">
+        <ion-list>
+          <ion-item *ngFor="let p of people" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+            <img fxFlex="10" [src]="assetImgPath + p.icon" />
+            <ion-label fxFlex>{{ p.name }}</ion-label>
+            <img fxFlex="10" [src]="assetSvgPath + 'options_dark.svg'" />
+          </ion-item>
+        </ion-list>
+      </p-card>
+    </div>
+  </div>
+</ion-content>

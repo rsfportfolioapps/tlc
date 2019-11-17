@@ -1,0 +1,43 @@
+<div class="account-detail__container" fxLayout="column"  fxLayoutGap="20px">
+  <div fxLayout="column" fxLayoutGap="20px">
+    <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+      <span class="circle">
+        <i class="fas fa-camera"></i>
+      </span>
+      <small>Profile photo</small>
+    </div>
+  
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+      <form novalidate [formGroup]="form" fxLayout="column" fxLayoutGap="20px">
+        <div>
+          <input type="text" formControlName="firstname" class="tlc-form__input" placeholder="Firstname" />
+        </div>
+  
+        <div>
+          <input type="text" formControlName="lastname" class="tlc-form__input" placeholder="Lastname" />
+        </div>
+  
+        <div>
+          <input type="email" formControlName="email" class="tlc-form__input" placeholder="Email" />
+        </div>
+  
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px">
+  
+          <input type="text" formControlName="day" class="tlc-form__input" placeholder="Day" />
+  
+          <input type="text" formControlName="month" class="tlc-form__input" placeholder="Month" />
+  
+          <input type="text" formControlName="year" class="tlc-form__input" placeholder="Year" />
+        </div>
+      </form>
+    </div>
+  
+    <div>
+      <h5>Change Password</h5>
+    </div>
+  </div>
+
+  <div>
+    <button type="submit" [disabled]="!form.valid" class="tlc-form__submit">Submit</button>
+  </div>
+</div>

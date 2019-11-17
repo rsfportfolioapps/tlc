@@ -1,0 +1,72 @@
+@import 'src/theme/variables.scss';
+
+h5 {
+  color: $color-black-1;
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.discover-new-topic__container {
+  background-color: $color-white;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.discover-new-topic__header {
+  padding: 10px;
+}
+
+img {
+  border-radius: 4px;
+}
+
+.discover-new-topic--icon-info {
+  span {
+    font-size: 12px;
+  }
+}
+
+.discover-new-topic__card-container {
+  width: 100%;
+  overflow-x: scroll;
+  background-color: $color-white;
+  padding: 10px;
+}
+
+:host ::ng-deep {
+  p-card {
+    margin: 0;
+    width: 250px;
+  }
+
+  .ui-card {
+    box-shadow: none;
+    margin-right: 10px;
+    width: 235px;
+  }
+
+  .ui-corner-all {
+    border-radius: 0;
+  }
+
+  .discover-new-topic__container {
+    .ui-card-title {
+      font-size: 16px;
+    }
+
+    .ui-card-body {
+      padding: 0;
+    }
+  }
+
+  .ui-card-footer {
+    padding-top: 0;
+  }
+}

@@ -1,0 +1,105 @@
+<ion-toolbar class="down-edge-shadow">
+  <div fxLayout="row">
+    <div routerLink="/dashboard/discussion" fxFlex="50" fxFlexOffset="3" fxLayoutAlign="start center">
+      <img [src]="assetSvgPath + 'arrow_back.svg'" />
+    </div>
+    <div fxFlex="50" fxLayoutAlign="end center" fxLayoutGap="20px">
+      <img [src]="assetSvgPath + 'baseline-share-24px.svg'" />
+      <img [src]="assetSvgPath + 'bookmark_dark.svg'" />
+      <img [src]="assetSvgPath + 'search.svg'" />
+      <app-dropdown-menu [menus]="menus" ></app-dropdown-menu>
+    </div>
+  </div>
+</ion-toolbar>
+
+<ion-content>
+  <div fxLayout="column" class="card__dd">
+    <div class="card__dd--content" fxFlex="100" fxLayout="row">
+      <div fxFlex fxLayout="column" fxLayoutAlign="start start">
+        <small>Created by <span class="text-blue">Me</span> on 25.05.2019, 4:30pm</small>
+        <div class="card__dd--content__time">4 hours ago</div>
+      </div>
+    </div>
+    <p-footer fxLayout="column">
+      <div fxLayout="row" fxLayoutAlign="start center" class="card__dd--badge">
+        <span fxLayoutAlign="center center" class="green">General</span>
+      </div>
+      <div class="card__dd--footer" fxFlex="100" fxLayout="row">
+        <h5>Me, Jenny Doe, and Jessy Cales</h5>
+      </div>
+    </p-footer>
+  </div>
+
+  <div fxLayout="column" class="card__dd">
+    <div class="card__dd--comment" fxFlex="100" fxLayout="column" fxLayoutGap="20px">
+      <div fxFlex fxLayoutAlign="start center">
+        <small>Comments(4)</small>
+      </div>
+      <ng-container *ngFor="let c of [0, 1]; let i = index">
+        <div fxLayout="row" fxLayoutGap="10px">
+          <div fxFlex="15" fxLayoutAlign="center start">
+            <img [src]="assetImgPath + 'sample_pic.png'" />
+          </div>
+          <div fxFlex="85" fxLayout="column" fxLayoutGap="10px">
+            <div class="comment-container">
+              <div><small>India Cale, 2h <i class="fas fa-circle c-red"></i></small></div>
+              <div>
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                deleniti
+                atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
+                similique
+                sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga
+              </div>
+              <div class="card__dd--comment-footer" fxLayoutAlign="space-around center">
+                <img [src]="assetSvgPath + 'reply.svg'" />
+                <span (click)="showExpert()">Ask an expert</span>
+                <img [src]="assetSvgPath + 'bookmark_dark.svg'" />
+                <img [src]="assetSvgPath + 'options_dark.svg'" />
+              </div>
+            </div>
+
+            <!-- reply -->
+            <div class="reply-container" *ngIf="i == 1" fxLayout="row" fxLayoutGap="10px">
+              <div fxFlex="15" fxLayoutAlign="center start">
+                <img [src]="assetImgPath + 'sample_pic.png'" />
+              </div>
+              <div fxFlex="85" fxLayout="column" fxLayoutGap="10px">
+                <div><small>India Cale, <span class="c-orange">Expert &#9733;</span> 2h</small></div>
+                <div class="comment-container reply">
+                  <div class="reply">
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                    deleniti
+                    atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
+                    similique
+                    sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga
+                  </div>
+                  <div class="card__dd--comment-footer" fxLayoutAlign="end center">
+                    <img [src]="assetSvgPath + 'bookmark_white.svg'" />
+                    <img [src]="assetSvgPath + 'options_white.svg'" />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+    </div>
+  </div>
+</ion-content>
+
+
+<ion-content class="dd__user-input down-edge-shadow ">
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <div fxFlex="75">
+      <input type="text" placeholder="Type a message" fxFlexFill>
+    </div>
+    <div fxLayout="row" fxFlex="25" fxLayoutGap="20px" fxLayoutAlign="center center">
+      <img [src]="assetSvgPath + 'attach_input.svg'" />
+      <div class="arrow-circle" fxLayoutAlign="center center">
+        <img [src]="assetSvgPath + 'arrow.svg'" />
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,24 @@
+<div class="continue-learning__container">
+  <div class="continue-learning__header" fxLayout="row" fxLayoutAlign="start end">
+    <h5>CONTINUE LEARNING</h5>
+  </div>
+  <div *ngFor="let cl of (continueLearning$ | async)" fxLayout="column" fxLayoutAlign="start start">
+    <p-card [header]="cl.header" [subheader]="cl.subHeader" styleClass="ui-card-shadow">
+      <p-header>
+        <img [src]="cl.imgUrl">
+      </p-header>
+
+      <div *ngIf="cl.description" class="card__description">{{ cl.description }}</div>
+      <div *ngIf="cl.subDescription" class="card__sub-description">{{ cl.subDescription }}</div>
+      <div *ngIf="cl.dueDate" class="card__due-date">{{ cl.dueDate }}</div>
+
+      <p-footer>
+        <div class="badges" fxLayout="row" fxLayoutAlign="space-between center">
+          <span fxLayoutAlign="center center" *ngFor="let badge of cl.badges" [attr.class]="badge.class"><img
+                 [src]="assetSvgPath + badge.icon" />
+            {{ badge.text }}</span>
+        </div>
+      </p-footer>
+    </p-card>
+  </div>
+</div>

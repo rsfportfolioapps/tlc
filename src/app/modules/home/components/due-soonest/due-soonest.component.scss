@@ -1,0 +1,66 @@
+@import '../../../../../theme/variables.scss';
+
+.due-soonest__container {
+  h5 {
+    color: $color-black-2;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-size: 14px;
+  }
+}
+
+img {
+  margin-right: 5px;
+}
+
+.due-soonest__header {
+  padding: 0 6px;
+  height: 50px;
+}
+
+h3 {
+  margin-top: 0;
+  padding: 13px 5px 4px 10px;
+  font-size: 18px;
+  color: $color-black;
+}
+
+span.due-soonest__channel {
+  margin-left: 7px;
+  margin-top: 5px;
+  position: relative;
+  top: 7px;
+  color: $color-white;
+  border: thin $color-gray solid;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.fa-ellipsis-v {
+  font-size: 24px;
+  color: $color-black-1;
+}
+
+.due-soonest__header-channel {
+  background-color: #333 !important;
+}
+
+.font-white {
+  color: $color-white !important;
+}
+
+:host ::ng-deep {
+  p-header {
+    div {
+      padding: 0 !important;
+    }
+  }
+
+  .ui-card {
+    margin: 5px;
+  }
+
+  .ui-card-footer {
+    padding-top: 0;
+  }
+}

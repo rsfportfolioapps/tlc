@@ -1,0 +1,13 @@
+<ion-toolbar [ngClass]="{'down-edge-shadow': getArr}">
+  <div fxLayout="row">
+    <div fxFlex="50" fxLayoutAlign="start center">
+      <img class="home_toolbar--profile" (click)="commonService.toggleSidenav(true)"
+           src="/assets/images/sample-profile-photo.png" />
+      <img class="home_toolbar--notification" [src]="assetSvgPath + 'notifications.svg'" />
+    </div>
+    <div fxFlex="50" fxLayoutAlign="end center">
+      <img routerLink="/ari" class="home_toolbar--ari" [src]="assetSvgPath + 'ari.svg'" />
+      <img routerLink="/search" class="home_toolbar--search" [src]="assetSvgPath + 'search.svg'" />
+    </div>
+  </div>
+</ion-toolbar>

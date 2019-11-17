@@ -1,0 +1,29 @@
+
+
+@mixin tlc-input {
+  background-color: $color-smoke-gray;
+  border: thin $color-clear-gray solid;
+  height: 45px;
+  min-height: 40px;
+  width: 100%;
+  border-radius: 2px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: normal;
+  color: $color-black;
+  
+}
+
+@mixin tlc-input-search {
+  background-color: $color-white;
+  border: thin $color-white solid;
+  height: 45px;
+  min-height: 40px;
+  width: 100%;
+  border-radius: 2px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: normal;
+  color: $color-black;
+  
+}

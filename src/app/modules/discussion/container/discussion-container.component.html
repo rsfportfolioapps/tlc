@@ -1,0 +1,58 @@
+<ion-content class="discussion__container">
+  <p-blockUI class="block-ui" [blocked]="showBlockMenu">
+    <ion-fab fxLayout="column" *ngIf="inBlockMenu" class="fab-button__inblock" vertical="bottom" horizontal="end"
+             slot="fixed" fxLayoutGap="40px">
+      <div (click)="gotoNewIdea()" class="block-ui__menu" fxLayoutAlign="end center">
+        <span>New idea</span>
+        <div fxLayoutAlign="center center" class="block-ui__circle">
+          <img [src]="assetSvgPath + 'ideas_search_white.svg'" />
+        </div>
+      </div>
+      <div (click)="gotoNewGeneralDiscussion()" class="block-ui__menu" fxLayoutAlign="end center">
+        <span> New General discussion</span>
+        <div fxLayoutAlign="center center" class="block-ui__circle green">
+          <img [src]="assetSvgPath + 'general_discussions_white.svg'" />
+        </div>
+      </div>
+      <div (click)="gotoNewContentDiscussion()" class="block-ui__menu" fxLayoutAlign="end center">
+        <span>New Content discussion</span>
+        <div fxLayoutAlign="center center" class="block-ui__circle violet">
+          <img [src]="assetSvgPath + 'content_discussions_white.svg'" />
+        </div>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="end center">
+        <ion-fab-button (click)="toggleOutBlockMenu(false, true)">
+          <ion-icon name="close"></ion-icon>
+        </ion-fab-button>
+      </div>
+    </ion-fab>
+  </p-blockUI>
+
+  <ion-segment [(ngModel)]="category" class="discussion__segment">
+    <ion-segment-button value="discussions">
+      <ion-label>DISCUSSIONS</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="saved">
+      <ion-label>SAVED</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="category">
+    <div *ngSwitchCase="'discussions'">
+      <app-my-discussion></app-my-discussion>
+      <app-discover-new-topic></app-discover-new-topic>
+      <app-discussion-newest></app-discussion-newest>
+    </div>
+
+    <div *ngSwitchCase="'saved'">
+      <app-saved-discussion></app-saved-discussion>
+    </div>
+  </div>
+
+  <ion-fab *ngIf="!showBlockMenu" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="toggleOutBlockMenu(true, false)">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

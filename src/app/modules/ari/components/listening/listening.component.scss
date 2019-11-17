@@ -1,0 +1,12 @@
+@import 'src/theme/shared';
+
+h1 {
+  margin: 5px;
+  font-style: italic;
+}
+
+:host {
+  width: 100vw;
+  position: relative;
+  left: 10px;
+}

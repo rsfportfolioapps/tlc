@@ -1,0 +1,24 @@
+<p-sidebar [(visible)]="display" (onHide)="commonService.toggleSidenav(false)" [showCloseIcon]="false" appendTo="body">
+  <div class="sn-header" fxLayout="column" fxLayoutGap="10px">
+    <img class="sn-profile" src="/assets/images/sample-profile-photo.png" />
+    <h5>Rank 17</h5>
+    <div class="badges" fxLayout="row" fxLayoutAlign="space-between center">
+      <span fxLayoutAlign="center center" *ngFor="let badge of badges" [attr.class]="badge.class">
+        <img *ngIf="badge.icon" [src]="assetSvgPath + badge.icon" />{{ badge.text }}</span>
+      <span>Due 9.10.2019</span>
+    </div>
+    <p-progressBar class="snpb" [value]="25"></p-progressBar>
+  </div>
+
+  <div class="sb-menus" fxLayout="column" fxFlexFill>
+    <mat-list role="list">
+      <mat-list-item role="listitem" (click)="gotoContacts()"><img [src]="assetSvgPath + 'contacts.svg'" /> Contacts</mat-list-item>
+      <mat-list-item role="listitem" (click)="gotoRank()" ><img [src]="assetSvgPath + 'myprogress.svg'" /> My Progress</mat-list-item>
+      <mat-list-item role="listitem" (click)="gotoAccountSettings()"><img [src]="assetSvgPath + 'settings.svg'" /> Settings</mat-list-item>
+    </mat-list>
+
+    <mat-list role="list" fxFlex fxLayoutAlign="flex-end">
+      <mat-list-item role="listitem"><img [src]="assetSvgPath + 'signout.svg'" /> Logout</mat-list-item>
+    </mat-list>
+  </div>
+</p-sidebar>

@@ -1,0 +1,9 @@
+@import 'src/theme/variables.scss';
+
+.home__container {
+  background-color: $color-gray-2;
+}
+
+ion-content {
+  --background: $color-gray-2;
+}

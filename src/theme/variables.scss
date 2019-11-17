@@ -1,0 +1,33 @@
+$font-path: "../assets/fonts";
+
+$color-primary: #003cff;
+$color-primary-1: #238AFF; 
+$color-secondary: #32db64;
+$color-red: #f53d3d;
+$color-light: #f4f4f4;
+$color-black: #333;
+$color-black-1: #666;
+$color-black-2:#6E767E;
+$color-white: #fff;
+$color-smoke-gray: #f1f1f1;
+$color-clear-gray: #eee;
+$color-gray: #CCC;
+$color-gray-1: #f1f1f1;
+$color-gray-2: #f3f3f3;
+$color-gray-3: #f9f9f9;
+$color-orange: #ff9900;
+$color-blue: #003CFF;
+$color-green: #1FC551;
+$color-green-bg: #e8f9ed;
+
+$down-edge-shadow: 0 2px 5px 0px $color-gray;
+$down-top-edge-shadow: 0px -2px 5px 0px $color-gray;
+$border-line: #ddd;
+
+$colors: (
+  primary:    #003cff,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222
+);

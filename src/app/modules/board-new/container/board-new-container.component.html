@@ -1,0 +1,27 @@
+<ion-toolbar class="down-edge-shadow">
+  <div fxLayout="row">
+    <div routerLink="/dashboard/activities" fxFlex="50" fxFlexOffset="3" fxLayoutAlign="start center"
+         fxLayoutGap="10px">
+      <img [src]="assetSvgPath + 'x.svg'" />
+      <span>New board</span>
+    </div>
+  </div>
+</ion-toolbar>
+
+<ion-content>
+  <div class="section bb" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="20px">
+    <div class="form-input" fxLayout="column">
+      <mat-form-field floatLabel="never">
+        <input matInput placeholder="Board name">
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="section bb">
+    <app-participants></app-participants>
+  </div>
+
+  <div class="p-15 mtb-40" fxLayout="row" fxLayoutAlign="center center">
+    <button type="button"><img [src]="assetSvgPath + 'tiny_check.svg'" /> <span class="ml-5">Create board</span></button>
+  </div>
+</ion-content>

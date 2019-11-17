@@ -1,0 +1,48 @@
+<ion-toolbar fxLayout="row" fxLayoutAlign="start center">
+  <i (click)="goBack()" class="fas fa-times"></i>
+</ion-toolbar>
+
+<ion-content>
+  <!-- <app-thumbnails></app-thumbnails> -->
+  <!-- <app-helpful></app-helpful> -->
+  <div class="ari-container" fxLayout="column" fxLayoutAlign="start start" fxFlexFill>
+    <div class="ari__chat-container" [ngClass]="{'mvh': isListening}" fxLayout="column" fxLayoutAlign="end end">
+      <ng-container *ngIf="!isListening">
+        <div *ngIf="welcomeAri && !(responseArr && responseArr.length > 0)" fxLayout="column" class="ari__bubble_chat"
+             fxLayoutAlign="center center">
+          <img [@zoomOutAnimate]="currentState" src="/assets/images/ari_temp_logo.png" />
+          <h2 [@fadeOutAnimate]="currentState">Hi, I'm Ari, your personal assistant. I will help you with your daily
+            tasks
+            and finding the information you need.</h2>
+        </div>
+        <div class="reply" [@slideUpAnimate]="currentState">
+          <app-reply [reply]="'What can i do for you?'"></app-reply>
+        </div>
+        <div *ngFor="let response of responseArr" class="response" [@slideUpAnimate]="currentState">
+          <app-ari-response *ngIf="!responseIsThumbnail(response)" [response]="response"></app-ari-response>
+        </div>
+        <app-thumbnails></app-thumbnails>
+      </ng-container>
+
+      <app-listening *ngIf="isListening"></app-listening>
+    </div>
+
+    <div *ngIf="!isListening" fxLayout="row" class="ari__bubble_q-container" scrollY="true" fxLayoutAlign="start center">
+      <span class="ari__bubble--link" (click)="setResponse({ type: 1, text: 'Whats new?' })">Whats new?</span>
+      <span class="ari__bubble--link" (click)="setResponse({ type: 2, text: 'I need help' })">I need help</span>
+      <span class="ari__bubble--link">I have a question</span>
+      <span class="ari__bubble--link">Whats new?</span>
+      <span class="ari__bubble--link">I need help</span>
+      <span class="ari__bubble--link">I have a question</span>
+    </div>
+
+    <div class="ari__chat--input-container" fxLayout="row" fxLayoutAlign="center center">
+      <div fxFlex="10" fxLayoutAlign="center center"><i class="fas fa-paperclip"></i></div>
+      <div fxFlex="80" fxLayoutAlign="center center">
+        <input class="ari__chat--input" type="text" placeholder="Type your message here"></div>
+      <div fxFlex="10" (click)="isListening = !isListening" fxLayoutAlign="center center"><i
+           class="fas fa-microphone"></i></div>
+    </div>
+  </div>
+
+</ion-content>

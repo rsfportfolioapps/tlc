@@ -1,0 +1,20 @@
+@import "src/theme/shared";
+
+:host ::ng-deep {
+  .mat-radio-label {
+    height: 15px;
+  }
+
+  .mat-radio-label-content {
+    font-size: 14px !important;
+  }
+
+  mat-radio-group {
+    p {
+      padding-left: 28px;
+      font-size: 14px;
+      color: $color-black-1;
+      margin-top: 0;
+    }
+  }
+}

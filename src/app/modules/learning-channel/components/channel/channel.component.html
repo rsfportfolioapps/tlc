@@ -1,0 +1,30 @@
+<div class="al__container">
+  <div *ngIf="(assignedLearning$ | async)" fxLayout="column" fxLayoutAlign="start start">
+    <p-card [header]="(assignedLearning$ | async).header" [subheader]="(assignedLearning$ | async).subHeader"
+            styleClass="ui-card-shadow" fxLayoutGap="10px">
+      <p-header fxLayout="column">
+        <div fxLayout="row" fxFlex="100">
+          <img [src]="(assignedLearning$ | async).imgUrl">
+        </div>
+      </p-header>
+
+      <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="10px">
+        <p>Due Sunday, 31 March 2019 at 4:30PM</p>
+      </div>
+
+      <div class="badges" fxLayout="row wrap" fxLayoutAlign="start center">
+        <span fxLayoutAlign="center center" *ngFor="let badge of (assignedLearning$ | async).badges"
+              [attr.class]="badge.class"><img [src]="assetSvgPath + badge.icon" />
+          {{ badge.text }}</span>
+      </div>
+
+      <h2>Ethics</h2>
+
+      <p>This module will explore the similarities and differences between ethics and law, compliance and morals and the
+        importance of values, principles and good decision making.</p>
+
+      <app-channel-resources></app-channel-resources>
+      <app-review></app-review>
+    </p-card>
+  </div>
+</div>

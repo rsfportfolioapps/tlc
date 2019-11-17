@@ -1,0 +1,78 @@
+@import 'src/theme/shared';
+
+.al__container {
+  h5 {
+    color: $color-black-2;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-size: 14px;
+  }
+}
+
+.lc__icon-info {
+  margin-top: 10px;
+}
+
+.ellipse {
+  height: 30px;
+}
+
+.category-course {
+  background-color: $color-primary;
+  border-radius: 3px 3px 0 0;
+}
+
+.category-channel {
+  background-color: $color-black;
+  border-radius: 3px 3px 0 0;
+}
+
+.al__header {
+  padding: 0 6px;
+  height: 50px;
+}
+
+h2 {
+  margin-top: 10px;
+}
+
+h3 {
+  margin-top: 0;
+  padding: 13px 5px 4px 10px;
+  font-size: 18px;
+  color: $color-black;
+}
+
+.font-white {
+  color: $color-white !important;
+}
+
+span.al__channel {
+  margin-left: 7px;
+  position: relative;
+  top: 7px;
+  color: $color-white;
+  border: thin $color-gray solid;
+  border-radius: 3px;
+  padding: 4px;
+}
+
+.al__actions-info {
+  span {
+    margin-right: 10px;
+    padding: 3px 5px;
+    border-radius: 20px;
+    color: $color-black-1;
+  }
+}
+
+:host ::ng-deep {
+  .ui-card {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .ui-card-footer {
+    padding-top: 0;
+  }
+}

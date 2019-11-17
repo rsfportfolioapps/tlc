@@ -1,0 +1,9 @@
+@import 'src/theme/shared';
+
+.down-edge-shadow {
+  box-shadow: $down-top-edge-shadow !important;
+}
+
+img {
+  margin-right: 10px;
+}

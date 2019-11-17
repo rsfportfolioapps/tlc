@@ -1,0 +1,39 @@
+@import 'src/theme/shared';
+
+.btn-primary {
+  @include btn-primary;
+}
+
+.upper-header {
+  background-color: $color-black;
+  color: $color-white;
+
+  > div {
+    padding: 10px;
+  }
+
+  span {
+    border-radius: 2px;
+    border: thin #CCC solid;
+    padding: 5px;
+  }
+
+  h4 {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.ca-container {
+  padding: 10px;
+}
+
+:host ::ng-deep {
+  p-card {
+    width: 100%;
+  }
+
+  .ui-card-body {
+    margin-bottom: 25px;
+  }
+}

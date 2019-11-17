@@ -1,0 +1,20 @@
+@import "src/theme/shared";
+
+:host {
+  width: 100%;
+}
+
+.ac__circle--container {
+  span {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+}
+
+.ac__circle {
+  border-radius: 50%;
+  background-color: $color-primary;
+  height: 60px;
+  width: 60px;
+  padding: 17px 14px;
+}

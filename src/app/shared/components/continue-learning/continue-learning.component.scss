@@ -1,0 +1,41 @@
+@import 'src/theme/variables.scss';
+
+.continue-learning__container {
+  h5 {
+    color: $color-black-2;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-size: 14px;
+  }
+}
+
+.continue-learning__header {
+  padding: 0 6px;
+  height: 50px;
+}
+
+.continue-learning--icon-info {
+  span {
+    padding: 3px 15px;
+  }
+}
+
+:host ::ng-deep {
+  p-card {
+    margin: 5px;
+  }
+
+  .ui-card-title {
+    font-size: 20px;
+  }
+
+  .ui-card-subtitle {
+    font-weight: normal;
+    font-size: 14px;
+    color: $color-black-1;
+  }
+
+  .ui-card-footer {
+    padding-top: 0;
+  }
+}

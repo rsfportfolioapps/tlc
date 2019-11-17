@@ -1,0 +1,52 @@
+@import 'src/theme/variables.scss';
+
+.kp__container {
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.kp__inner-container {
+  width: 100%;
+
+  div {
+    width: 100%;
+  }
+}
+
+.kp__date {
+  font-size: 12px;
+  margin: 5px;
+  color: $color-black-1;
+}
+
+.kp__card {
+  div {
+    width: 100%;
+  }
+}
+
+img {
+  height: 30px;
+  width: 30px;
+}
+
+.kp_title {
+  line-height: 20px !important;
+  text-align: center !important;
+  font-size: 14px !important;
+  padding: 5px;
+  flex-wrap: wrap;
+}
+
+:host ::ng-deep {
+  .ui-card-body {
+    width: 140px !important;
+    height: 180px !important;
+    padding: 5px !important;
+  }
+
+  .ui-card-content {
+    height: 100%;
+    border: thin $color-orange solid;
+  }
+}

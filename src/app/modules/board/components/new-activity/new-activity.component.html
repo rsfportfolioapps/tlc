@@ -1,0 +1,88 @@
+<ion-toolbar>
+  <div fxLayoutAlign="start center">
+    <div fxLayout="row" fxFlex="70" fxFlexAlign="start center" fxLayoutGap="20px">
+      <img class="close" (click)="onClose()" [src]="assetSvgPath + 'x.svg'" />
+      <div>New Activity</div>
+    </div>
+  </div>
+</ion-toolbar>
+
+<ion-content class="na-container">
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Toppings</ion-label>
+      <ion-select multiple="true" cancelText="Nah" okText="Okay!">
+        <ion-select-option value="bacon">Bacon</ion-select-option>
+        <ion-select-option value="olives">Black Olives</ion-select-option>
+        <ion-select-option value="xcheese">Extra Cheese</ion-select-option>
+        <ion-select-option value="peppers">Green Peppers</ion-select-option>
+        <ion-select-option value="mushrooms">Mushrooms</ion-select-option>
+        <ion-select-option value="onions">Onions</ion-select-option>
+        <ion-select-option value="pepperoni">Pepperoni</ion-select-option>
+        <ion-select-option value="pineapple">Pineapple</ion-select-option>
+        <ion-select-option value="sausage">Sausage</ion-select-option>
+        <ion-select-option value="Spinach">Spinach</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Activity name *</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Description</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Due Date</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" value="2012-12-15T13:47:20.789"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Estimated time</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div fxLayout="column" fxLayoutAlign="space-around center" class="ac__circle--container">
+    <div fxFill fxLayout="row" fxLayoutAlign="start center">
+      <p fxFlex="95" fxFlexOffset="5">Attachments</p>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="40px">
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <div class="ac__circle" fxLayoutAlign="center center">
+          <img [src]="assetSvgPath + 'attach_file_white.svg'" />
+        </div>
+        <span>Add file</span>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <div class="ac__circle" fxLayoutAlign="center center">
+          <img [src]="assetSvgPath + 'add_link.svg'" />
+        </div>
+        <span>Add link</span>
+      </div>
+    </div>
+  </div>
+
+  <div fxLayout="column" fxLayoutAlign="space-around center" class="ac__circle--container">
+    <div fxFill fxLayout="row" fxLayoutAlign="start center">
+      <p fxFlex="95" fxFlexOffset="5">Participants</p>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="40px">
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <div class="ac__circle">
+          <img [src]="assetSvgPath + 'add_users.svg'" />
+        </div>
+        <span>Invite</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="mtb-40" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="20px">
+    <button type="button"><img [src]="assetSvgPath + 'tiny_check.svg'" /> <span class="ml-5">Create activity</span></button>
+  </div>
+</ion-content>

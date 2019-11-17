@@ -1,0 +1,13 @@
+@import 'src/theme/shared';
+
+.bb {
+  :not(:last-child) {
+    border-bottom: thin $color-gray solid;
+  }
+}
+
+h5 {
+  margin-left: 10px;
+  font-size: 16px;
+}
+

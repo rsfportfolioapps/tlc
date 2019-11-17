@@ -1,0 +1,98 @@
+@import 'src/theme/shared';
+
+.fa-times {
+  font-size: 24px;
+}
+
+.reply {
+  width: 100%;
+  margin-bottom: 20px;
+  place-content: center flex-start;
+  align-items: center;
+  flex-direction: row;
+  box-sizing: border-box;
+  display: flex;
+  opacity: 1;
+}
+
+.mvh {
+  height: 100vh !important;
+}
+
+.response {
+  width: 100%;
+  place-content: center flex-end;
+  align-items: center;
+  flex-direction: row;
+  box-sizing: border-box;
+  display: flex;
+  opacity: 1;
+}
+
+.ari__chat--input-container {
+  height: 55px;
+  max-height: 55px;
+  width: 100%;
+
+  .fas {
+    font-size: 24px;
+    color: $color-black;
+  }
+}
+
+.ari__chat--input {
+  border: none;
+  margin: 2px;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.ari__chat-container {
+  height: calc(100% - 95px);
+  min-height: calc(100% - 95px);
+  padding: 0 10px;
+  width: 100vw;
+}
+
+.ari__bubble {
+  background-color: $color-gray-1;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin: 5px 0;
+}
+
+.ari__bubble_chat {
+  padding: 0 20px;
+  text-align: center;
+  height: calc(100% - 35px);
+}
+
+.ari__bubble_q-container {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 100vw;
+  height: 50px;
+  margin-left: 20px;
+  min-height: 50px;
+  max-height: 50px;
+}
+
+.ari__bubble--link {
+  background-color: $color-white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin: 10px 0;
+  border: thin $color-primary solid;
+  font-size: 14px;
+  color: $color-primary;
+  white-space: nowrap;
+  margin-right: 10px;
+}
+
+:host ::ng-deep {
+  ion-toolbar {
+    padding: 0 15px;
+    box-shadow: none;
+  }
+}

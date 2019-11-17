@@ -1,0 +1,21 @@
+<div class="recommended-channel__container">
+  <div class="recommended-channel__header" fxLayout="row" fxLayoutAlign="start start">
+    <p>Recommended Channels</p>
+  </div>
+  <div fxLayout="row" class="recommend-channel--card__container" fxLayoutAlign="start start">
+    <p-card *ngFor="let rc of recommendedChannel$ | async" styleClass="ui-card-shadow">
+      <p-header>
+        <img [src]="rc.imgUrl">
+      </p-header>
+      <h5>{{ rc.title }}</h5>
+      <div>{{ rc.description }}</div>
+      <p-footer fxLayout="column" fxLayoutGap="10px" >
+        <div class="badges" fxLayout="row" fxLayoutAlign="space-between center">
+          <span fxLayoutAlign="center center" *ngFor="let badge of rc.badges" [attr.class]="badge.class">
+            <img *ngIf="badge.icon" [src]="assetSvgPath + badge.icon" />
+            {{ badge.text }}</span>
+        </div>
+      </p-footer>
+    </p-card>
+  </div>
+</div>

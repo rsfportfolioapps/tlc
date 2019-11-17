@@ -1,0 +1,69 @@
+@import 'src/theme/variables.scss';
+
+.l-m__container {
+  h5 {
+    color: $color-black-2;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-size: 14px;
+  }
+}
+
+img {
+  margin-right: 5px;
+}
+
+.l-m__header {
+  padding: 0 6px;
+  height: 50px;
+}
+
+h3 {
+  margin-top: 0;
+  padding: 13px 5px 4px 10px;
+  font-size: 18px;
+  color: $color-black;
+}
+
+.fa-ellipsis-v {
+  font-size: 24px;
+  color: $color-white;
+}
+
+.l-m__header-channel {
+  background-color: #333 !important;
+}
+
+.font-white {
+  color: $color-white !important;
+}
+
+span.l-m__channel {
+  margin-left: 7px;
+  margin-top: 5px;
+  position: relative;
+  top: 7px;
+  color: $color-white;
+  border: thin $color-gray solid;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.l-m__actions-info {
+  span {
+    margin-right: 10px;
+    padding: 3px 5px;
+    border-radius: 20px;
+    color: $color-black-1;
+  }
+}
+
+:host ::ng-deep {
+  p-card {
+    margin: 5px;
+  }
+
+  .ui-card-footer {
+    padding-top: 0;
+  }
+}

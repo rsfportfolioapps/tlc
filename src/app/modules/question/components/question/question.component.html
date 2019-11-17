@@ -1,0 +1,7 @@
+<div fxLayout="column" fxLayoutGap="20px" fxFlexFill>
+  <h3>Why is learning about ethics important?</h3>
+
+  <div *ngFor="let answer of question.answers">
+    <app-answer [answer]="answer"></app-answer>
+  </div>
+</div>

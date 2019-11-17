@@ -1,0 +1,39 @@
+<ion-toolbar>
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <div fxFlex="70" fxFlexAlign="start center">
+      <i routerLink="/dashboard/activities" class="fas fa-arrow-left"></i>
+      <span class="toolbar__title">Board name</span>
+    </div>
+    <div fxFlex="30" fxLayoutAlign="end start">
+      <img [src]="assetSvgPath + 'search.svg'" />
+      <app-dropdown-menu [menus]="menus" ></app-dropdown-menu>
+    </div>
+  </div>
+</ion-toolbar>
+
+<!-- <ion-content class="board-head__container">
+  <div class="board__header--container">
+    <div fxFlex="70" class="board__title" fxLayoutAlign="start center">TODO</div>
+    <div fxFlex="15" fxLayoutAlign="center center">
+      <img [src]="assetSvgPath + 'sort_white.svg" />
+    </div>
+    <div fxFlex="15" fxLayoutAlign="center center">
+      <img (click)="presentPopover($event)" [src]="assetSvgPath + 'options_white.svg" />
+    </div>
+  </div>
+</ion-content> -->
+
+<ion-content class="board__container">
+  <!-- <div class="board__list" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
+    <app-board></app-board>
+  </div> -->
+
+  <app-board></app-board>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="presentNewActivity($event)">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+

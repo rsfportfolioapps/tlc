@@ -1,0 +1,36 @@
+@import "src/theme/shared";
+
+.pd-container {
+  box-shadow: $down-edge-shadow;
+}
+
+.pd-container--sc,
+.pd-container--gc {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: $down-edge-shadow;
+}
+
+:host ::ng-deep {
+  ion-fab {
+    left: 35%;
+
+    button {
+      padding: 10px;
+      border-radius: 20px;
+      background-color: #FFF;
+      font-size: 16px;
+      -webkit-box-shadow: -1px 0px 5px 0px $color-gray;
+      -moz-box-shadow: -1px 0px 5px 0px $color-gray;
+      box-shadow: -1px 0px 5px 0px $color-gray;
+      cursor: pointer;
+    }
+  }
+
+  ion-toolbar {
+    padding: 0 10px 0 10px;
+    -webkit-box-shadow: -1px 0px 5px 0px $color-gray;
+    -moz-box-shadow: -1px 0px 5px 0px $color-gray;
+    box-shadow: -1px 0px 5px 0px $color-gray;
+  }
+}

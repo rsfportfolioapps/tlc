@@ -1,0 +1,12 @@
+<div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="20px">
+  <h4>Leave discussion?</h4>
+
+  <div>
+    If you leave this discussion you will need an invitation to join again.
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px" fxFlexFill>
+    <button mat-button (click)="dialogRef.close()" class="btn-cancel">Cancel</button>
+    <button mat-button (click)="dialogRef.close()" class="btn-leave-discussion">Leave discussion</button>
+  </div>
+</div>

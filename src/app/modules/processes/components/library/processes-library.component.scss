@@ -1,0 +1,19 @@
+@import 'src/theme/variables.scss';
+
+.sort-container {
+  padding: 0 10px;
+
+  i {
+    margin: 0 10px;
+    position: relative;
+    top: 3px;
+  }
+}
+
+img {
+  height: 30px;
+}
+
+h4 {
+  margin-left: 10px;
+}

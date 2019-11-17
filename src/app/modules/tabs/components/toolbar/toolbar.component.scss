@@ -1,0 +1,25 @@
+@import 'src/theme/shared';
+
+.home_toolbar--profile {
+  height: 32px;
+  width: auto;
+}
+
+.home_toolbar--notification,
+.home_toolbar--ari,
+.home_toolbar--search {
+  width: 24px;
+  height: 24px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.down-edge-shadow {
+  box-shadow: $down-edge-shadow !important;
+}
+
+:host ::ng-deep {
+  ion-toolbar {
+    padding: 0 5px;
+  }
+}

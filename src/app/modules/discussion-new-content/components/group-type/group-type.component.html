@@ -1,0 +1,8 @@
+<mat-radio-group>
+  <div *ngFor="let type of types" fxLayout="column" fxLayoutAlign="center start" >
+    <mat-radio-button fxLayout="column" [value]="type.value">
+      {{type.label}}
+    </mat-radio-button>
+    <p>{{ type.description }}</p>
+  </div>
+</mat-radio-group>

@@ -1,0 +1,36 @@
+<div *ngFor="let lm of (learnMore$ | async)" fxLayout="column" fxLayoutAlign="start start">
+  <p-card [header]="lm.header" [subheader]="lm.subHeader" styleClass="ui-card-shadow">
+    <p-header fxLayout="column">
+      <div [ngClass]="{'l-m__header-channel': lm.type === 1}" fxLayout="row" fxFlex="100">
+        <div fxFlex="90" fxLayout="column">
+          <div fxFlex="100" fxLayoutAlign="start center"><span *ngIf="lm.type === 1"
+                  class="l-m__channel font-white">CHANNEL</span></div>
+          <div fxFlex="100" fxLayoutAlign="start center">
+            <h3 *ngIf="lm.title" [ngClass]="{'font-white': lm.type === 1}">{{ lm.title }}</h3>
+          </div>
+        </div>
+        <div fxFlex="10" fxLayoutAlign="center center"> <img [src]="assetSvgPath + 'options_dark.svg'" /></div>
+      </div>
+      <div fxLayout="row" fxFlex="100">
+        <img [src]="lm.imgUrl">
+      </div>
+    </p-header>
+
+    <div *ngIf="lm.description" class="card__description">{{ lm.description }}</div>
+    <div *ngIf="lm.subDescription" class="card__sub-description">{{ lm.subDescription }}</div>
+    <div *ngIf="lm.dueDate" class="card__due-date">{{ lm.dueDate }}</div>
+
+    <p-footer>
+      <div class="badges" fxLayout="row wrap" fxLayoutAlign="start center">
+        <span fxLayoutAlign="center center" *ngFor="let badge of lm.badges" [attr.class]="badge.class"><img
+               [src]="assetSvgPath + badge.icon" />
+          {{ badge.text }}</span>
+      </div>
+
+      <div class="l-m__actions-info" fxLayout="row" fxLayoutAlign="space-between center">
+        <span fxLayoutAlign="center center" *ngFor="let action of lm.actions">
+          <img [src]="assetSvgPath + action.icon" />{{ action.text }}</span>
+      </div>
+    </p-footer>
+  </p-card>
+</div>

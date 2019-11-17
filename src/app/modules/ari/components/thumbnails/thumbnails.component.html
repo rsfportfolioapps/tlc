@@ -1,0 +1,10 @@
+<div class="thumbnail__container">
+    <div fxLayout="row" class="thumbnail__card-container" fxLayoutAlign="start start">
+      <p-card *ngFor="let thumb of (thumbnails$ | async)">
+        <img [src]="thumb.img" />
+        <p-footer>
+          <span>{{ thumb.text }}</span>
+        </p-footer>
+      </p-card>
+    </div>
+  </div>
